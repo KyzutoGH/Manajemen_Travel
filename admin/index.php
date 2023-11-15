@@ -1,6 +1,6 @@
 <?php
 $judul_browser = "Administrator - Aplikasi ePerpus";
-include 'koneksi.php';
+include '../bagian/koneksi.php';
   
 ?>
 <style type="text/css">
@@ -21,23 +21,9 @@ include 'koneksi.php';
 
 <?php
 session_start();
+
+include '../bagian/kepala.php';
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title><?php echo $judul_browser; ?></title>
-  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-  <link rel="stylesheet" href="../dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
-  <link rel="stylesheet" href="../dist/css/sweetalert2.min.css">
-    
-  <link rel="stylesheet" href="../dist/css/font-awesome.min.css">
-  <link rel="stylesheet" href="../dist/css/ionicons.min.css">
-  <link rel="stylesheet" href="../dist/css/dataTables.bootstrap.min.css">
-  <link rel="stylesheet" href="../dist/css/_all-skins.min.css">
-</head>
 <body class="hold-transition skin-blue sidebar-mini">
 
         <?php
@@ -153,7 +139,6 @@ session_start();
                 <tbody>
                 <tr>
 		    <?php
-            include 'koneksi.php';
             $no = 1;
             $data = mysqli_query($koneksi, "select * from transaksi");
             while($d=mysqli_fetch_array($data)){

@@ -6,7 +6,7 @@ include '../bagian/kepala.php';
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <img src="../dist/img/logo.png" style="width: 150px;"><br>
+    <img src="../dist/img/travel.png" style="width: 150px;"><br>
     <a href="index.php"><b>Agen</b> Travel Rahayu</a>
   </div>
   <div class="login-box-body">

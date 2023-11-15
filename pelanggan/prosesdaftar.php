@@ -1,5 +1,5 @@
 <?php
-  include 'koneksi.php';
+include '../bagian/koneksi.php';
   $aidi = uniqid();
   $user = trim($_POST['user']);
   $pass  = trim($_POST['pass']);

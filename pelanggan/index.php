@@ -1,7 +1,7 @@
 <?php
-$judul_browser = "Dashboard ePerpus";
+$judul_browser = "Aplikasi Travel Gatel - Utama";
 
-include '../koneksi.php';
+include '../bagian/koneksi.php';
   
 ?>
 <style type="text/css">
@@ -22,23 +22,8 @@ include '../koneksi.php';
 
 <?php
 session_start();
+include '../bagian/kepala.php';
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title><?php echo $judul_browser; ?></title>
-  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-  <link rel="stylesheet" href="../dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
-  <link rel="stylesheet" href="../dist/css/sweetalert2.min.css">
-    
-  <link rel="stylesheet" href="../dist/css/font-awesome.min.css">
-  <link rel="stylesheet" href="../dist/css/ionicons.min.css">
-  <link rel="stylesheet" href="../dist/css/dataTables.bootstrap.min.css">
-  <link rel="stylesheet" href="../dist/css/_all-skins.min.css">
-</head>
 <body class="hold-transition skin-blue sidebar-mini">
 
         <?php
@@ -72,12 +57,12 @@ session_start();
             <ul class="nav navbar-nav">
                 <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+                    <img src="../dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
                     <span class="hidden-xs"><?php echo ucwords($_SESSION['user']); ?></span>
                 </a>
                 <ul class="dropdown-menu">
                     <li class="user-header">
-                        <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                        <img src="../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
                         <p><?php echo $_SESSION['user']; ?></p>
                         <p><small>Pelanggan</small></p>
                     </li>
@@ -137,31 +122,31 @@ session_start();
                 <thead>
                 <tr>
             <th>No</th>
-            <th>Kode Buku</th>
-            <th>Judul Buku</th>
-            <th>Jenis</th>
-            <th>Pengarang</th>
-            <th>Penerbit</th>
-            <th>Tahun</th>
-            <th>Aksi</th>
+            <th>Asal</th>
+            <th>Tujuan</th>
+            <th>Kelas</th>
+            <th>Tanggal</th>
+            <th>Keberangkatan</th>
+            <th>Harga</th>
+            <th>Diskon</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
             <?php
-            include 'koneksi.php';
             $no = 1;
             $data = mysqli_query($koneksi, "select * from jadwal");
             while($d=mysqli_fetch_array($data)){
         ?>
         <tr>
             <td><?php echo $no++; ?></td>
-            <td><?php echo $d['kode_buku']; ?></td>
-            <td><?php echo $d['judul_buku']; ?></td>
-            <td><?php echo $d['jenis']; ?></td>
-            <td><?php echo $d['pengarang']; ?></td>
-            <td><?php echo $d['penerbit']; ?></td>
-            <td><?php echo $d['tahun']; ?></td>
+            <td><?php echo $d['Asal']; ?></td>
+            <td><?php echo $d['Tujuan']; ?></td>
+            <td><?php echo $d['Kelas']; ?></td>
+            <td><?php echo $d['TanggalBerangkat']; ?></td>
+            <td><?php echo $d['JamBerangkat']; ?></td>
+            <td><?php echo $d['Harga']; ?></td>
+            <td><?php echo $d['Diskon']; ?></td>
             <td>
             <button disabled="disabled" class="col-xs-offset-1 btn btn-success glyphicon glyphicon-pencil" href="update.php?id_buku=<?php echo $d['id_buku']; ?>"></button>
                     <button disabled="disabled" class="btn btn-danger glyphicon glyphicon-trash" href="hapus.php?id_buku=<?php echo $d['id_buku']; ?>"></button>   

@@ -3,7 +3,7 @@
 session_start();
  
 // menghubungkan php dengan koneksi database
-include 'koneksi.php';
+include '../bagian/koneksi.php';
  
 // menangkap data yang dikirim dari form login
 $user = $_POST['user'];
@@ -25,7 +25,7 @@ if($cek > 0){
     $_SESSION['status'] = "login";
     $akses = "Admin";
     // alihkan ke halaman dashboard admin
-    header("location:../TravelGatel/admin/index.php");
+    header("location:../admin/index.php");
 }else{
   echo "ERROR 2";
 }
