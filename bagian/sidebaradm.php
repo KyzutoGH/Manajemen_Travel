@@ -25,10 +25,16 @@
 					<li class="<?php if ($submenu == "Jadwal") {
 									echo "active";
 								} ?>">
-						<a href="index.php">
-							<i class="fa fa-table text-red"></i> Data Perjalanan
+						<a href="<?php
+									$subzero = isset($_GET['subzero']) ? $_GET['subzero'] : '';
+									echo isset($subzero) && $subzero == "Jadwal" ? '..' : '.';
+									?>/index.php">
+							<i class="fa fa-table text-red"></i> Data Jadwal
 						</a>
 					</li>
+				</ul>
+				<ul class="treeview-menu">
+					<li></li>
 				</ul>
 			</li>
 		</ul>
