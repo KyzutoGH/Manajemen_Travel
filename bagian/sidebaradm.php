@@ -2,7 +2,7 @@
 	<section class="sidebar">
 		<ul class="sidebar-menu" data-widget="tree">
 			<li class="header">MENU</li>
-			<li class="treeview <?php if ($menu == "Perjalanan") {
+			<li class="treeview <?php if ($submenu == "Armada" || $submenu == "Jadwal") {
 									echo "active";
 								} ?>">
 				<a href="#">
@@ -18,7 +18,7 @@
 						<a href="<?php
 									$subzero = isset($_GET['subzero']) ? $_GET['subzero'] : '';
 									echo isset($subzero) && $subzero == "Armada" ? '..' : '.';
-									?>/armada.php">
+									?>/index.php?submenu=Armada">
 							<i class="fa fa-bus text-aqua"></i> Data Armada
 						</a>
 					</li>
@@ -28,13 +28,13 @@
 						<a href="<?php
 									$subzero = isset($_GET['subzero']) ? $_GET['subzero'] : '';
 									echo isset($subzero) && $subzero == "Jadwal" ? '..' : '.';
-									?>/index.php">
+									?>/index.php?submenu=Jadwal">
 							<i class="fa fa-table text-red"></i> Data Jadwal
 						</a>
 					</li>
 				</ul>
 			</li>
-			<li class="treeview <?php if ($menu == "Pelanggan") {
+			<li class="treeview <?php if ($submenu == "Pelanggan" || $submenu == "Penumpang") {
 									echo "active";
 								} ?>">
 				<a href="#">
@@ -50,7 +50,7 @@
 						<a href="<?php
 									$subzero = isset($_GET['subzero']) ? $_GET['subzero'] : '';
 									echo isset($subzero) && $subzero == "Pelanggan" ? '..' : '.';
-									?>/pelanggan.php">
+									?>/index.php?submenu=Pelanggan">
 							<i class="fa fa-bus text-aqua"></i> Data Pelanggan
 						</a>
 					</li>
@@ -60,7 +60,7 @@
 						<a href="<?php
 									$subzero = isset($_GET['subzero']) ? $_GET['subzero'] : '';
 									echo isset($subzero) && $subzero == "Penumpang" ? '..' : '.';
-									?>/penumpang.php">
+									?>/index.php?submenu=Penumpang">
 							<i class="fa fa-table text-red"></i> Data Penumpang
 						</a>
 					</li>
@@ -71,7 +71,7 @@
 				<a href="<?php
 							$subzero = isset($_GET['subzero']) ? $_GET['subzero'] : '';
 							echo isset($subzero) && $subzero == "Transaksi" ? '..' : '.';
-							?>/transaksi.php">
+							?>/index.php?submenu=Transaksi">
 					<i class="fa fa-money text-green"></i>Transaksi
 				</a>
 			</li><li class="<?php if ($submenu == "Laporan") {
@@ -80,7 +80,7 @@
 				<a href="<?php
 							$subzero = isset($_GET['subzero']) ? $_GET['subzero'] : '';
 							echo isset($subzero) && $subzero == "Laporan" ? '..' : '.';
-							?>/laporan.php">
+							?>/index.php?submenu=Laporan">
 					<i class="fa fa-print text-yellow"></i>Laporan
 				</a>
 			</li>

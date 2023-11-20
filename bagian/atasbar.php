@@ -1,6 +1,6 @@
 <header class="main-header">
 	<a href="#" class="logo">
-		<span class="logo-lg">Aplikasi Travel Gatel</span>
+		<span class="logo-lg"><img src="../dist/img/logovertikal.png" style="width: 190px; height: 45px;"></span>
 	</a>
 	<nav class="navbar navbar-static-top">
 		<div class="navbar-custom-menu">

@@ -1,0 +1,54 @@
+<div class="content-wrapper">
+    <section class="content-header">
+        <h1>Data Armada</h1>
+        <ol class="breadcrumb">
+            <li><a href="index.php"><i class="fa fa-dashboard"></i> Beranda</a></li>
+            <li class="active">Armada</li>
+        </ol>
+    </section>
+    <section class="content">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="box">
+                    <div class="box-header">
+                        <a href="Create/tambah.php?subzero=<?php echo $submenu; ?>" class="btn btn-primary" role="button"><b>+</b> Tambah Armada</a>
+                    </div>
+                    <div class="box-body">
+                        <table id="example2" class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>Armada</th>
+                                    <th>Jenis</th>
+                                    <th>Status</th>
+                                    <th>Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <?php
+                                    $no = 1;
+                                    $data = mysqli_query($koneksi, "select * from armada");
+                                    while ($d = mysqli_fetch_array($data)) {
+                                    ?>
+                                <tr>
+                                    <td><?php echo $no++; ?></td>
+                                    <td><?php echo $d['NamaArmada']; ?></td>
+                                    <td><?php echo $d['Jenis']; ?></td>
+                                    <td><?php echo $d['Status']; ?></td>
+                                    <td>
+                                        <a class="col-xs-offset-1 btn btn-success glyphicon glyphicon-pencil" href="editarmada.php?id_buku=<?php echo $d['IDArmada']; ?>"></a>
+                                        <a class="btn btn-danger glyphicon glyphicon-trash" href="hapusarmada.php?id_buku=<?php echo $d['IDArmada']; ?>"></a>
+                                    </td>
+                                </tr>
+                            <?php
+                                    }
+                            ?>
+                        </table>
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
