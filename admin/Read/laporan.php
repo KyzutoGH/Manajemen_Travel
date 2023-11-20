@@ -1,9 +1,9 @@
 <div class="content-wrapper">
     <section class="content-header">
-        <h1>Data Transaksi</h1>
+        <h1>Data Laporan</h1>
         <ol class="breadcrumb">
             <li><a href="index.php?submenu=Jadwal"><i class="fa fa-dashboard"></i> Beranda</a></li>
-            <li class="active">Transaksi</li>
+            <li class="active">Laporan</li>
         </ol>
     </section>
     <section class="content">

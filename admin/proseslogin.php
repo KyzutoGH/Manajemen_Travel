@@ -25,7 +25,7 @@ if($cek > 0){
     $_SESSION['status'] = "login";
     $akses = "Admin";
     // alihkan ke halaman dashboard admin
-    header("location:../admin/index.php");
+    header("location:../admin/index.php?submenu=Armada");
 }else{
   echo "ERROR 2";
 }

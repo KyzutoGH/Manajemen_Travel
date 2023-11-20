@@ -52,6 +52,8 @@ include '../bagian/kepala.php';
 				include 'Read/transaksi.php';
 			} elseif ($submenu == "Laporan") {
 				include 'Read/laporan.php';
+			} else {
+				include 'TheHandler/tabel404.php';
 			}
 			include '../bagian/copyright.php';
 		}
