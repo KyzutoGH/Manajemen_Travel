@@ -34,11 +34,21 @@
                                 <tr>
                                     <td><?php echo $no++; ?></td>
                                     <td><?php echo $d['NamaArmada']; ?></td>
-                                    <td><?php echo $d['Jenis']; ?></td>
-                                    <td><?php echo $d['Status']; ?></td>
+                                    <td><?php if ($d['Jenis'] == "Bus") {
+                                        ?><i class="fa fa-bus"></i><?php
+                                        } elseif ($d["Jenis"] == "Pesawat") {
+                                            ?><i class="fa fa-plane"></i><?php
+                                        } elseif ($d["Jenis"] == "Kapal") {
+                                        ?><i class="fa fa-ship"></i><?php
+                                        }?></td>
+                                    <td><?php if ($d["Status"] == "Partner") {
+                                        ?><span class="badge bg-green"><?php echo $d["Status"]?></span><?php
+                                    } elseif ($d["Status"] == "Non-Partner"){
+                                        ?><span class="badge bg-yellow"><?php echo $d["Status"]?></span><?php
+                                    }?></td>
                                     <td>
-                                        <a class="col-xs-offset-1 btn btn-success glyphicon glyphicon-pencil" href="editarmada.php?id_buku=<?php echo $d['IDArmada']; ?>"></a>
-                                        <a class="btn btn-danger glyphicon glyphicon-trash" href="hapusarmada.php?id_buku=<?php echo $d['IDArmada']; ?>"></a>
+                                        <a class="col-xs-offset-1 btn btn-success glyphicon glyphicon-pencil" href="Update/update.php?subzero=<?php echo $submenu; ?>&idarmada=<?php echo $d['IDArmada']; ?>"></a>
+                                        <a class="btn btn-danger glyphicon glyphicon-trash" href="Delete/hapus.php?subzero=<?php echo $submenu; ?>&idarmada=<?php echo $d['IDArmada']; ?>"></a>
                                     </td>
                                 </tr>
                             <?php

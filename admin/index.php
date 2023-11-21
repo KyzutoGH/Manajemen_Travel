@@ -3,27 +3,7 @@ $judul_browser = "Administrator - Aplikasi Travel Gatel";
 include '../bagian/koneksi.php';
 $menu = isset($_GET['menu']) ? $_GET['menu'] : '';
 $submenu = isset($_GET['submenu']) ? $_GET['submenu'] : '';
-?>
-<style type="text/css">
-	.btn-success {
-		margin-left: 83%;
-	}
-
-	.panel-info {
-		margin-top: 3%;
-	}
-
-	.navbar-inverse {
-		background-color: green;
-	}
-
-	.navbar-brand {
-		color: white;
-		font-family: arial black;
-	}
-</style>
-
-<?php
+include '../bagian/saitel.php';
 session_start();
 
 include '../bagian/kepala.php';

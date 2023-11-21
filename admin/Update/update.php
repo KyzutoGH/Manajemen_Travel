@@ -4,6 +4,7 @@ include '../../bagian/koneksi.php';
 $menu = "Perjalanan";
 $submenu = "Armada";
 $subzero = $_GET['subzero'];
+
 include '../../bagian/saitel.php';
 session_start();
 ?>
@@ -93,52 +94,16 @@ session_start();
                         <div class="box">
                             <?php
                             if ($subzero == "Armada") {
-                                include 'armada/insert.php';
+                                include 'armada/edit.php';
                             } ?>
                         </div>
                     </section>
                 </div>
-                <footer class="main-footer">
-                    <div class="pull-right hidden-xs">
-                        <b>Version</b> 1.0.0
-                    </div>
-                    <strong>Copyright &copy; 2018 <a href="#">IksanJR</a>.</strong>
-                </footer>
-            </div>
-
-
-        <?php
-        }
-    } else {
-        ?>
-        <div class="row">
-            <div class="col-md-offset-4 col-md-4">
-                <div class="panel panel-warning">
-                    <div class="panel-heading">
-                        Informasi
-                    </div>
-                    <div class="panel-body">
-                        <p>Maaf, Anda tidak berhak mengakses halaman ini secara langsung. Silahkan login terlebih dahulu.</p>
-                        <a class="btn btn-warning pull-right" role="button" href="../login.php">Login</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    <?php
-    }
-    ?>
-
-    <script src="../../dist/js/jquery.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <script src="../../dist/js/sweetalert2.min.js"></script>
-    <script src="../../dist/js/validasi.js"></script>
-
-    <script src="../../dist/js/jquery.dataTables.min.js"></script>
-    <script src="../../dist/js/dataTables.bootstrap.min.js"></script>
-    <script src="../../dist/js/jquery.slimscroll.min.js"></script>
-    <script src="../../dist/js/fastclick.js"></script>
-    <script src="../../dist/js/adminlte.min.js"></script>
-    <script src="../../dist/js/demo.js"></script>
-</body>
-
-</html>
+                <?php
+			include '../bagian/copyright.php';
+		}
+	} else {
+		include '../bagian/noakses.php';
+	}
+	include '../bagian/kaki.php';
+		?>

@@ -43,4 +43,4 @@ include '../bagian/kepala.php';
   }
 </script>
 
-<? include '../bagian/kaki.php';?>
+<?php include '../bagian/kaki.php';?>

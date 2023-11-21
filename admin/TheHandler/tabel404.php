@@ -1,9 +1,9 @@
 <div class="content-wrapper">
     <section class="content-header">
-        <h1>Data Pelanggan</h1>
+        <h1>ERROR PAGE</h1>
         <ol class="breadcrumb">
             <li><a href="index.php?submenu=Jadwal"><i class="fa fa-dashboard"></i> Beranda</a></li>
-            <li class="active">Pelanggan</li>
+            <li class="active">ERROR</li>
         </ol>
     </section>
     <section class="content">
