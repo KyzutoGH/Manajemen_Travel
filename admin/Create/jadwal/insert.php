@@ -31,7 +31,12 @@
     <div class="form-group has-feedback">
         <label for="asal" class="col-sm-2 control-label">Asal</label>
         <div class="col-sm-9" style="width: 930px">
-            <input type="text" class="form-control" placeholder="Asal" name="asal" />
+            <?php
+            // Mendapatkan nilai jenis armada terpilih
+            $selectedArmada = isset($_POST['armada']) ? $_POST['armada'] : '';
+            $asalValue = ($selectedArmada === 'Bus') ? 'Selorejo' : '';
+            echo '<input type="text" class="form-control" placeholder="Asal" name="asal" value="' . $asalValue . '" ' . (($selectedArmada === 'Bus') ? 'readonly' : '') . ' />';
+            ?>
         </div>
     </div>
 
@@ -94,25 +99,22 @@
     function updateAsalDanKelas(select) {
         var selectedOption = select.options[select.selectedIndex];
         var jenis = selectedOption.getAttribute('data-jenis');
+        var asalInput = document.querySelector('input[name="asal"]');
         var kelasSelect = document.getElementById('kelasSelect');
 
         if (jenis === 'Bus') {
-            // Set kelas otomatis
+            // Set nilai asal dan kelas otomatis untuk armada Bus
+            asalInput.value = 'Selorejo';
+            asalInput.setAttribute('readonly', true);
+
             kelasSelect.innerHTML = '<option value="Ekonomi">Ekonomi</option>' +
                 '<option value="Ekonomi AC">Ekonomi AC</option>' +
                 '<option value="Eksekutif">Eksekutif</option>';
-        } else if (jenis === 'Pesawat') {
-            // Set kelas otomatis
-            kelasSelect.innerHTML = '<option value="Ekonomi">Ekonomi</option>' +
-                '<option value="Bisnis">Bisnis</option>' +
-                '<option value="Eksekutif">Eksekutif</option>';
-        } else if (jenis === 'Kapal') {
-            // Set kelas otomatis
-            kelasSelect.innerHTML = '<option value="Ekonomi">Ekonomi</option>' +
-                '<option value="Kelas II">Kelas II</option>' +
-                '<option value="Kelas I">Kelas I</option>';
         } else {
-            // Set kelas otomatis
+            // Reset nilai asal dan kelas untuk jenis armada selain Bus
+            asalInput.value = '';
+            asalInput.removeAttribute('readonly');
+
             kelasSelect.innerHTML = '<option value="" selected>Tidak Ada Kelas</option>';
         }
     }
