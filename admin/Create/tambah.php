@@ -94,7 +94,9 @@ session_start();
                             <?php
                             if ($subzero == "Armada") {
                                 include 'armada/insert.php';
-                            } ?>
+                            } elseif ($subzero == "Jadwal") {
+                                include 'jadwal/insert.php';
+                            }?>
                         </div>
                     </section>
                 </div>

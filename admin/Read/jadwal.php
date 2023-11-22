@@ -11,7 +11,7 @@
 			<div class="col-xs-12">
 				<div class="box">
 					<div class="box-header">
-						<a href="tambahbuku.php" class="btn btn-primary" role="button"><b>+</b> Tambah Jadwal</a>
+						<a href="Create/tambah.php?subzero=Jadwal" class="btn btn-primary" role="button"><b>+</b> Tambah Jadwal</a>
 					</div>
 					<div class="box-body">
 						<table id="example2" class="table table-bordered table-hover">
@@ -19,32 +19,43 @@
 								<tr>
 									<th>No</th>
 									<th>Armada</th>
-									<th>Tipe</th>
 									<th>Asal</th>
 									<th>Tujuan</th>
+									<th>Kelas</th>
+									<th>Tanggal Berangkat</th>
 									<th>Jam Berangkat</th>
 									<th>Jam Tiba</th>
 									<th>Harga</th>
+									<th>Aksi</th>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
 									<?php
 									$no = 1;
-									$data = mysqli_query($koneksi, "select * from transaksi");
+									$data = mysqli_query($koneksi, "SELECT armada.NamaArmada, armada.Jenis, jadwal.IDJadwal, jadwal.Asal, jadwal.Tujuan, jadwal.Kelas, jadwal.TanggalBerangkat, jadwal.JamBerangkat, jadwal.JamTiba, jadwal.Harga, jadwal.Diskon FROM armada JOIN jadwal ON armada.IDArmada = Jadwal.IDArmada;");
 									while ($d = mysqli_fetch_array($data)) {
 									?>
 								<tr>
 									<td><?php echo $no++; ?></td>
-									<td><?php echo $d['kode_buku']; ?></td>
-									<td><?php echo $d['judul_buku']; ?></td>
-									<td><?php echo $d['jenis']; ?></td>
-									<td><?php echo $d['pengarang']; ?></td>
-									<td><?php echo $d['penerbit']; ?></td>
-									<td><?php echo $d['tahun']; ?></td>
+									<td><?php echo $d['NamaArmada']; ?>&nbsp;
+									<?php if ($d['Jenis'] == "Bus") {
+										?><i class="fa fa-bus"></i><?php
+																} elseif ($d["Jenis"] == "Pesawat") {
+																	?><i class="fa fa-plane"></i><?php
+																		} elseif ($d["Jenis"] == "Kapal") {
+																			?><i class="fa fa-ship"></i><?php
+																		} ?></td>
+									<td><?php echo $d['Asal']; ?></td>
+									<td><?php echo $d['Tujuan']; ?></td>
+									<td><?php echo $d['Kelas']; ?></td>
+									<td><?php echo $d['TanggalBerangkat']; ?></td>
+									<td><?php echo $d['JamBerangkat']; ?></td>
+									<td><?php echo $d['JamTiba']; ?></td>
+									<td><?php echo $d['Harga']; ?></td>
 									<td>
-										<a class="col-xs-offset-1 btn btn-success glyphicon glyphicon-pencil" href="editbuku.php?id_buku=<?php echo $d['id_buku']; ?>"></a>
-										<a class="btn btn-danger glyphicon glyphicon-trash" href="hapus.php?id_buku=<?php echo $d['id_buku']; ?>"></a>
+										<a class="col-xs-offset-1 btn btn-success glyphicon glyphicon-pencil" href="editbuku.php?id_buku=<?php echo $d['IDJadwal']; ?>"></a>
+										<a class="btn btn-danger glyphicon glyphicon-trash" href="hapus.php?id_buku=<?php echo $d['IDJadwal']; ?>"></a>
 									</td>
 								</tr>
 							<?php

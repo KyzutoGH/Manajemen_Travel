@@ -36,7 +36,11 @@
                                 <tr>
                                     <td><?php echo $no++; ?></td>
                                     <td><?php echo $d['Username']; ?></td>
-                                    <td><?php echo $d['Password']; ?></td>
+                                    <td>
+                                        <?php
+                                        $passwordLength = strlen($d['Password']);
+                                        echo str_repeat('*', $passwordLength);
+                                        ?></td>
                                     <td><?php echo $d['NamaPelanggan']; ?></td>
                                     <td><?php echo $d['NomorHP']; ?></td>
                                     <td><?php echo $d['NomorIdentitas']; ?></td>
