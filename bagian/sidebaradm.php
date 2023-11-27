@@ -17,7 +17,7 @@
 								} ?>">
 						<a href="<?php
 									$subzero = isset($_GET['subzero']) ? $_GET['subzero'] : '';
-									echo isset($subzero) && $subzero == "Armada" ? '..' : '.';
+									echo isset($subzero) && $subzero == "Armada" || $subzero == "Jadwal" ? '..' : '.';
 									?>/index.php?submenu=Armada">
 							<i class="fa fa-bus text-aqua"></i> Data Armada
 						</a>
@@ -27,7 +27,7 @@
 								} ?>">
 						<a href="<?php
 									$subzero = isset($_GET['subzero']) ? $_GET['subzero'] : '';
-									echo isset($subzero) && $subzero == "Jadwal" ? '..' : '.';
+									echo isset($subzero) && $subzero == "Jadwal" || $subzero == "Armada" ? '..' : '.';
 									?>/index.php?submenu=Jadwal">
 							<i class="fa fa-table text-red"></i> Data Jadwal
 						</a>

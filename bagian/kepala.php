@@ -12,6 +12,5 @@
     
   <link rel="stylesheet" href="../dist/css/font-awesome.min.css">
   <link rel="stylesheet" href="../dist/css/ionicons.min.css">
-  <link rel="stylesheet" href="../dist/css/dataTables.bootstrap.min.css">
   <link rel="stylesheet" href="../dist/css/_all-skins.min.css">
 </head>

@@ -86,8 +86,8 @@ session_start();
                         <ol class="breadcrumb">
                             <li><a href="../index.php"><i class="fa fa-dashboard"></i> Beranda</a></li>
                             <li class="active">Tambah <?php if ($subzero == "Armada") {
-                                echo 'Armada';
-                            }?></li>
+                                                            echo 'Armada';
+                                                        } ?></li>
                         </ol>
                     </section>
                     <section class="content">
@@ -95,15 +95,17 @@ session_start();
                             <?php
                             if ($subzero == "Armada") {
                                 include 'armada/edit.php';
+                            } elseif ($subzero == "Jadwal") {
+                                include 'jadwal/edit.php';
                             } ?>
                         </div>
                     </section>
                 </div>
-                <?php
-			include '../bagian/copyright.php';
-		}
-	} else {
-		include '../bagian/noakses.php';
-	}
-	include '../bagian/kaki.php';
-		?>
+        <?php
+            include '../../bagian/copyright.php';
+        }
+    } else {
+        include '../../bagian/noakses.php';
+    }
+    include '../../bagian/kaki.php';
+        ?>

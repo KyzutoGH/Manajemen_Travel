@@ -110,12 +110,28 @@
             kelasSelect.innerHTML = '<option value="Ekonomi">Ekonomi</option>' +
                 '<option value="Ekonomi AC">Ekonomi AC</option>' +
                 '<option value="Eksekutif">Eksekutif</option>';
+        } else if (jenis === 'Pesawat') {
+            // Reset nilai asal dan kelas untuk jenis armada selain Bus
+            asalInput.value = '';
+            asalInput.removeAttribute('readonly');
+
+            kelasSelect.innerHTML = '<option value="Ekonomi">Ekonomi</option>' +
+                '<option value="Bisnis">Bisnis</option>' +
+                '<option value="Eksekutif">Eksekutif</option>';
+        } else if (jenis === 'Kapal') {
+            // Reset nilai asal dan kelas untuk jenis armada selain Bus
+            asalInput.value = '';
+            asalInput.removeAttribute('readonly');
+
+            kelasSelect.innerHTML = '<option value="Ekonomi">Ekonomi</option>' +
+                '<option value="Kelas II">Kelas II</option>' +
+                '<option value="Kelas I">Kelas I</option>';
         } else {
             // Reset nilai asal dan kelas untuk jenis armada selain Bus
             asalInput.value = '';
             asalInput.removeAttribute('readonly');
 
-            kelasSelect.innerHTML = '<option value="" selected>Tidak Ada Kelas</option>';
+            kelasSelect.innerHTML = '<option value="Tidak Ada Kelas">Tidak Ada Kelas</option>';
         }
     }
 

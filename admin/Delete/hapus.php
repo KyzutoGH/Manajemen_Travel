@@ -34,12 +34,14 @@ session_start();
 
       if ($subzero == "Armada") {
         include 'armada/delete.php';
+      } elseif ($subzero == "Jadwal") {
+        include 'jadwal/delete.php';
       } else {
         include '';
       }
     }
   } else {
-    include '../bagian/noakses.php';
+    include '../../bagian/noakses.php';
   }
-  include '../bagian/kaki.php';
+  include '../../bagian/kaki.php';
   ?>
