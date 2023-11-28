@@ -11,7 +11,7 @@
             <div class="col-xs-12">
                 <div class="box">
                     <div class="box-header">
-                        <a href="Create/tambah.php?subzero=<?php echo $menu; ?>" class="btn btn-primary" role="button"><b>+</b> Tambah Transaksi</a>
+                        <a href="Create/tambah.php?subzero=<?php echo $submenu; ?>" class="btn btn-primary" role="button"><b>+</b> Tambah Transaksi</a>
                     </div>
                     <div class="box-body">
                         <table id="example2" class="table table-bordered table-hover">

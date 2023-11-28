@@ -101,6 +101,8 @@ session_start();
                                 include 'penumpang/insert.php';
                             } elseif ($subzero == "Transaksi") {
                                 include 'transaksi/insert.php';
+                            } elseif ($subzero == "Bayar") {
+                                include 'transaksi/bayar.php';
                             }?>
                         </div>
                     </section>
