@@ -97,6 +97,8 @@ session_start();
                                 include 'armada/edit.php';
                             } elseif ($subzero == "Jadwal") {
                                 include 'jadwal/edit.php';
+                            } elseif ($subzero == "Pelanggan") {
+                                include 'pelanggan/edit.php';
                             } ?>
                         </div>
                     </section>

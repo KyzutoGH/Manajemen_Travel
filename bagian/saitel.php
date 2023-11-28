@@ -1,7 +1,7 @@
 <style type="text/css">
-    .btn-success {
+    /* .btn-success {
         margin-left: 83%;
-    }
+    } */
 
     .panel-info {
         margin-top: 3%;

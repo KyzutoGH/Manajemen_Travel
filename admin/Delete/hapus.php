@@ -36,6 +36,8 @@ session_start();
         include 'armada/delete.php';
       } elseif ($subzero == "Jadwal") {
         include 'jadwal/delete.php';
+      } elseif ($subzero == "Pelanggan") {
+        include 'pelanggan/delete.php';
       } else {
         include '';
       }

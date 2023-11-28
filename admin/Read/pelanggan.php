@@ -11,7 +11,7 @@
             <div class="col-xs-12">
                 <div class="box">
                     <div class="box-header">
-                        <a href="Create/tambah.php?subzero=<?php echo $submenu; ?>" class="btn btn-primary" role="button"><b>+</b> Tambah Armada</a>
+                        <a href="Create/tambah.php?subzero=<?php echo $submenu; ?>" class="btn btn-primary" role="button"><b>+</b> Tambah Pelanggan</a>
                     </div>
                     <div class="box-body">
                         <table id="example2" class="table table-bordered table-hover">
@@ -45,8 +45,8 @@
                                     <td><?php echo $d['NomorHP']; ?></td>
                                     <td><?php echo $d['NomorIdentitas']; ?></td>
                                     <td>
-                                        <a class="col-xs-offset-1 btn btn-success glyphicon glyphicon-pencil" href="editarmada.php?IDPelanggan=<?php echo $d['IDPelanggan']; ?>"></a>
-                                        <a class="btn btn-danger glyphicon glyphicon-trash" href="hapusarmada.php?IDPelanggan=<?php echo $d['IDPelanggan']; ?>"></a>
+                                        <a class="col-xs-offset-1 btn btn-success glyphicon glyphicon-pencil" href="Update/update.php?subzero=<?php echo $submenu; ?>&IDPelanggan=<?php echo $d['IDPelanggan']; ?>"></a>
+                                        <a class="btn btn-danger glyphicon glyphicon-trash" disabled title="Tidak Dapat Menghapus Pelanggan, Silahkan Buat Yang Baru Mohon Maaf." href="Delete/hapus.php?subzero=<?php echo $submenu; ?>&IDPelanggan=<?php echo $d['IDPelanggan']; ?>"></a>
                                     </td>
                                 </tr>
                             <?php

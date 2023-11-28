@@ -96,6 +96,12 @@ session_start();
                                 include 'armada/insert.php';
                             } elseif ($subzero == "Jadwal") {
                                 include 'jadwal/insert.php';
+                            } elseif ($subzero == "Pelanggan") {
+                                include 'pelanggan/insert.php';
+                            } elseif ($subzero == "Penumpang") {
+                                include 'penumpang/insert.php';
+                            } elseif ($subzero == "Transaksi") {
+                                include 'transaksi/insert.php';
                             }?>
                         </div>
                     </section>
