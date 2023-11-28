@@ -1,26 +1,21 @@
 <div class="login-box">
   <div class="login-box-body">
-    <h4>Anda Yakin Mau Menghapus Data Armada :</h4>
-    <form action="pelanggan/proses.php" method="post">
+    <h4>Anda Yakin Mau Menghapus Data Penumpang :</h4>
+    <form action="penumpang/proses.php" method="post">
     <?php
-    $id = $_GET['IDPelanggan'];
-    $data = mysqli_query($koneksi, "select * from pelanggan where IDPelanggan='$id'");
+    $id = $_GET['IDPenumpang'];
+    $data = mysqli_query($koneksi, "select * from penumpang where IDPenumpang='$id'");
     while($d = mysqli_fetch_array($data)){
     ?>
       <div class="form-group has-feedback">
         <input type="hidden" name="subzero" value="<?php echo $subzero; ?>">
-        <input type="hidden" name="idpelanggan" value="<?php echo $d['IDPelanggan']; ?>">
-        <label for="judul">Nama Pelanggan</label>
-        <input type="text" class="form-control" disabled="disabled" value="<?php echo $d['Username'
-        ];?>" name="username">
+        <input type="hidden" name="idpenumpang" value="<?php echo $d['IDPenumpang']; ?>">
+        <label for="judul">Nama Penumpang</label>
+        <input type="text" class="form-control" disabled="disabled" value="<?php echo $d['NamaPenumpang'
+        ];?>" name="namapenumpang">
       </div>
       <div class="form-group has-feedback">
-        <label for="pengarang">Jenis</label>
-        <input type="text" class="form-control" disabled="disabled" value="<?php echo $d['NamaPelanggan'
-        ];?>" name="namapelanggan">
-      </div>
-      <div class="form-group has-feedback">
-        <label for="penerbit">Status</label>
+        <label for="pengarang">Nomor Identitas</label>
         <input type="text" class="form-control" disabled="disabled" value="<?php echo $d['NomorIdentitas'
         ];?>" name="nomoridentitas">
       </div>

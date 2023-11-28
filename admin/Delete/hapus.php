@@ -38,6 +38,8 @@ session_start();
         include 'jadwal/delete.php';
       } elseif ($subzero == "Pelanggan") {
         include 'pelanggan/delete.php';
+      } elseif ($subzero == "Penumpang") {
+        include 'penumpang/delete.php';
       } else {
         include '';
       }

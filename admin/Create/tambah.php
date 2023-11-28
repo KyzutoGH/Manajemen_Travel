@@ -21,7 +21,6 @@ session_start();
 
     <link rel="stylesheet" href="../../dist/css/font-awesome.min.css">
     <link rel="stylesheet" href="../../dist/css/ionicons.min.css">
-    <link rel="stylesheet" href="../../dist/css/dataTables.bootstrap.min.css">
     <link rel="stylesheet" href="../../dist/css/_all-skins.min.css">
 </head>
 
@@ -139,10 +138,6 @@ session_start();
     <script src="../../dist/js/jquery.min.js"></script>
     <script src="../../dist/js/bootstrap.min.js"></script>
     <script src="../../dist/js/sweetalert2.min.js"></script>
-    <script src="../../dist/js/validasi.js"></script>
-
-    <script src="../../dist/js/jquery.dataTables.min.js"></script>
-    <script src="../../dist/js/dataTables.bootstrap.min.js"></script>
     <script src="../../dist/js/jquery.slimscroll.min.js"></script>
     <script src="../../dist/js/fastclick.js"></script>
     <script src="../../dist/js/adminlte.min.js"></script>

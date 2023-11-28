@@ -99,6 +99,8 @@ session_start();
                                 include 'jadwal/edit.php';
                             } elseif ($subzero == "Pelanggan") {
                                 include 'pelanggan/edit.php';
+                            } elseif ($subzero == "Penumpang") {
+                                include 'penumpang/edit.php';
                             } ?>
                         </div>
                     </section>

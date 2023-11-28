@@ -11,7 +11,7 @@
             <div class="col-xs-12">
                 <div class="box">
                     <div class="box-header">
-                        <a href="Create/tambah.php?subzero=<?php echo $submenu; ?>" class="btn btn-primary" role="button"><b>+</b> Tambah Armada</a>
+                        <a href="Create/tambah.php?subzero=<?php echo $submenu; ?>" class="btn btn-primary" role="button"><b>+</b> Tambah Penumpang</a>
                     </div>
                     <div class="box-body">
                         <table id="example2" class="table table-bordered table-hover">
@@ -56,8 +56,8 @@
                                         <td><?php echo $d['NamaPenumpang']; ?></td>
                                         <td><?php echo $d['NomorIdentitas']; ?></td>
                                         <td>
-                                            <a class="col-xs-offset-1 btn btn-success glyphicon glyphicon-pencil" href="editarmada.php?IDPelanggan=<?php echo $d['IDPelanggan']; ?>"></a>
-                                            <a class="btn btn-danger glyphicon glyphicon-trash" href="hapusarmada.php?IDPelanggan=<?php echo $d['IDPelanggan']; ?>"></a>
+                                            <a class="col-xs-offset-1 btn btn-success glyphicon glyphicon-pencil" href="update/update.php?subzero=Penumpang&IDPenumpang=<?php echo $d['IDPenumpang']; ?>"></a>
+                                            <a class="btn btn-danger glyphicon glyphicon-trash" href="delete/hapus.php?subzero=Penumpang&IDPenumpang=<?php echo $d['IDPenumpang']; ?>"></a>
                                         </td>
                                     </tr>
                                 <?php
