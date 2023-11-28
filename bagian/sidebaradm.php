@@ -80,7 +80,7 @@
 				<a href="<?php
 							$subzero = isset($_GET['subzero']) ? $_GET['subzero'] : '';
 							echo isset($subzero) && $subzero == "Laporan" ? '..' : '.';
-							?>/index.php?submenu=Laporan">
+							?>/index.php?submenu=Laporan&tanggal=<?php echo date('Y-m-d'); ?>">
 					<i class="fa fa-print text-yellow"></i>Laporan
 				</a>
 			</li>

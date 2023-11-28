@@ -59,7 +59,7 @@
                                 ?>
                                     <tr>
                                         <td><?php echo $no++; ?></td>
-                                        <td><a href="../Read/detai.php?idtrx=<?php echo $d['ID Transaksi'] ?>"><?php echo $d['Nama Pelanggan']; ?></a></td>
+                                        <td><a href="index.php?submenu=Detail&idtrx=<?php echo $d['ID Transaksi'] ?>"><?php echo $d['Nama Pelanggan']; ?></a></td>
                                         <td><a href="index.php?submenu=Jadwal&idjadwal=<?php echo $d['IDJadwal']; ?>" title="<?php echo $d['NamaArmada'] . ' - ' . $d['Asal'] . ' - ' . $d['Tujuan']; ?>"><?php echo $d['Perjalanan']; ?></a></td>
                                         <td>
                                             <?php
@@ -67,9 +67,9 @@
                                             $timestamp = strtotime($tanggalBerangkat);
 
                                             $bulan = array(
-                                                1 => "Januari", 2 => "Februari", 3 => "Maret", 4 => "April", 5 => "Mei", 6 => "Juni",
-                                                7 => "Juli", 8 => "Agustus", 9 => "September", 10 => "Oktober", 11 => "November", 12 => "Desember"
-                                            );
+                                                    1 => "JAN", 2 => "FEB", 3 => "MAR", 4 => "APR", 5 => "MEI", 6 => "JUN",
+                                                    7 => "JUL", 8 => "AGU", 9 => "SEP", 10 => "OKT", 11 => "NOV", 12 => "DES"
+                                                );
 
                                             $tanggalFormatted = date('d', $timestamp) . ' ' . $bulan[date('n', $timestamp)] . ' ' . date('Y', $timestamp);
 
@@ -114,8 +114,8 @@
                                             <?php } elseif ($d['Status'] === 'Dibayar') { ?>
                                                 <span class="label label-success">Transaksi Sudah Dibayar</span>
                                             <?php } else { ?>
-                                                <a class="col-xs-offset-1 btn btn-success" href="Update/transaksi/bayar.php?idtrx=<?php echo $d['ID Transaksi']; ?>"><span class="label label-success">Konfirmasi</span></a>
-                                                <a class="col-xs-offset-1 btn btn-danger" href="Update/transaksi/batal.php?idtrx=<?php echo $d['ID Transaksi']; ?>"><span class="label label-danger">Batalkan</span></a>
+                                                <a class="col-xs-offset-1" href="Update/transaksi/bayar.php?idtrx=<?php echo $d['ID Transaksi']; ?>"><span class="label label-success">Konfirmasi</span></a>
+                                                <a class="col-xs-offset-1" href="Update/transaksi/batal.php?idtrx=<?php echo $d['ID Transaksi']; ?>"><span class="label label-danger">Batalkan</span></a>
                                             <?php } ?>
                                         </td>
                                     </tr>
@@ -123,8 +123,6 @@
                                 }
                                 ?>
                             </tbody>
-
-
                         </table>
                     </div>
                     <!-- /.box-body -->

@@ -3,10 +3,11 @@ $judul_browser = "Administrator - Aplikasi Travel Gatel";
 include '../bagian/koneksi.php';
 $menu = isset($_GET['menu']) ? $_GET['menu'] : '';
 $submenu = isset($_GET['submenu']) ? $_GET['submenu'] : '';
-include '../bagian/saitel.php';
+$idtrx = isset($_GET['idtrx']) ? $_GET['idtrx'] : '';
 session_start();
 
 include '../bagian/kepala.php';
+include '../bagian/saitel.php';
 ?>
 
 <body class="hold-transition skin-blue sidebar-mini">
@@ -32,6 +33,8 @@ include '../bagian/kepala.php';
 				include 'Read/transaksi.php';
 			} elseif ($submenu == "Laporan") {
 				include 'Read/laporan.php';
+			} elseif ($submenu == "Detail") {
+				include 'Read/detail.php';
 			} else {
 				include 'TheHandler/tabel404.php';
 			}
