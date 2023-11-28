@@ -103,22 +103,19 @@
                                             }
                                             ?>
                                         </td>
-                                        <td class="<?php echo ($d['Status'] == 'Belum Dibayar') ? 'bg-red-active color-palette' : (($d['Status'] == 'Dibayar') ? 'bg-green-active color-palette' : (($d['Status'] == 'Dibatalkan') ? 'bg-yellow-active color-palette' : '')); ?>">
-
-                                            <?php echo $d['Status']; ?>
+                                        <td>
+                                            <span class="<?php echo ($d['Status'] == 'Belum Dibayar') ? 'label label-danger' : (($d['Status'] == 'Dibayar') ? 'label label-warning' : (($d['Status'] == 'Dibatalkan') ? 'label label-success' : '')); ?>">
+                                                <?php echo $d['Status']; ?></span>
                                         </td>
                                         <td>
-                                            <?php if ($d['Status'] !== 'Dibatalkan') { ?>
-                                                <!-- If the status is not 'Dibatalkan', render the buttons -->
-                                                <a class="col-xs-offset-1 btn btn-success glyphicon fa fa-money" href="Update/transaksi/bayar.php?idtrx=<?php echo $d['ID Transaksi']; ?>"></a>
-
-                                                <?php if ($d['Status'] !== 'Dibayar') { ?>
-                                                    <!-- If the status is not 'Dibayar', render the 'Batal' button -->
-                                                    <span class="label label-success">Transaksi Sudah Dibayar</span>
-                                                <?php } ?>
-                                            <?php } else { ?>
-                                                <!-- If the status is 'Dibatalkan', you can optionally show a message or any other content -->
+                                            <?php if ($d['Status'] === 'Dibatalkan') { ?>
                                                 <span class="label label-danger">Transaksi Dibatalkan</span>
+
+                                            <?php } elseif ($d['Status'] === 'Dibayar') { ?>
+                                                <span class="label label-success">Transaksi Sudah Dibayar</span>
+                                            <?php } else { ?>
+                                                <a class="col-xs-offset-1 btn btn-success" href="Update/transaksi/bayar.php?idtrx=<?php echo $d['ID Transaksi']; ?>"><span class="label label-success">Konfirmasi</span></a>
+                                                <a class="col-xs-offset-1 btn btn-danger" href="Update/transaksi/batal.php?idtrx=<?php echo $d['ID Transaksi']; ?>"><span class="label label-danger">Batalkan</span></a>
                                             <?php } ?>
                                         </td>
                                     </tr>
