@@ -45,8 +45,9 @@
                                     <td><?php echo $d['NomorHP']; ?></td>
                                     <td><?php echo $d['NomorIdentitas']; ?></td>
                                     <td>
-                                        <a class="col-xs-offset-1 btn btn-success glyphicon glyphicon-pencil" href="Update/update.php?subzero=<?php echo $submenu; ?>&IDPelanggan=<?php echo $d['IDPelanggan']; ?>"></a>
-                                        <a class="btn btn-danger glyphicon glyphicon-trash" href="Delete/hapus.php?subzero=<?php echo $submenu; ?>&IDPelanggan=<?php echo $d['IDPelanggan']; ?>"></a>
+                                        <a class="btn btn-primary glyphicon glyphicon glyphicon-shopping-cart" title="Pesan" href="Create/tambah.php?subzero=TransaksiPelanggan&IDPelanggan=<?php echo $d['IDPelanggan']; ?>"></a>
+                                        <a class="btn btn-success glyphicon glyphicon-pencil" title="Edit" href="Update/update.php?subzero=<?php echo $submenu; ?>&IDPelanggan=<?php echo $d['IDPelanggan']; ?>"></a>
+                                        <a class="btn btn-danger glyphicon glyphicon-trash" title="Hapus" href="Delete/hapus.php?subzero=<?php echo $submenu; ?>&IDPelanggan=<?php echo $d['IDPelanggan']; ?>"></a>
                                     </td>
                                 </tr>
                             <?php

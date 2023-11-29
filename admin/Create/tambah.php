@@ -99,6 +99,8 @@ session_start();
                                 include 'pelanggan/insert.php';
                             } elseif ($subzero == "Penumpang") {
                                 include 'penumpang/insert.php';
+                            } elseif ($subzero == "TransaksiPelanggan") {
+                                include 'transaksipelanggan/insert.php';
                             } elseif ($subzero == "Transaksi") {
                                 include 'transaksi/insert.php';
                             } elseif ($subzero == "Bayar") {
