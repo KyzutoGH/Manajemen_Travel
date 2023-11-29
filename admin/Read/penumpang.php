@@ -19,7 +19,6 @@
                                 <tr>
                                     <th>No</th>
                                     <th>Nama Pelanggan</th>
-                                    <th>NomorHP</th>
                                     <th>Nama Penumpang</th>
                                     <th>Nomor Identitas</th>
                                     <th>Aksi</th>
@@ -52,7 +51,6 @@
                                             }
                                             ?>
                                         </td>
-                                        <td><?php echo $d['NomorHP']; ?></td>
                                         <td><?php echo $d['NamaPenumpang']; ?></td>
                                         <td><?php echo $d['NomorIdentitas']; ?></td>
                                         <td>

@@ -16,10 +16,6 @@ if (isset($_POST['bayar'])) {
     // Insert the transaction data into the database
     $sqlInsert = "INSERT INTO Transaksi (IDJadwal, IDPelanggan, JumlahPenumpang, TotalHarga) VALUES ('$idJadwal', '$idPelanggan', '$jumlahPenumpang', '$totalHarga')";
     mysqli_query($koneksi, $sqlInsert);
-
-    // Redirect to a thank you page or any other appropriate page
-    header("Location: thank_you.php");
-    exit();
 }
 ?>
 

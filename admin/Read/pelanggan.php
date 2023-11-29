@@ -46,7 +46,7 @@
                                     <td><?php echo $d['NomorIdentitas']; ?></td>
                                     <td>
                                         <a class="col-xs-offset-1 btn btn-success glyphicon glyphicon-pencil" href="Update/update.php?subzero=<?php echo $submenu; ?>&IDPelanggan=<?php echo $d['IDPelanggan']; ?>"></a>
-                                        <a class="btn btn-danger glyphicon glyphicon-trash" disabled title="Tidak Dapat Menghapus Pelanggan, Silahkan Buat Yang Baru Mohon Maaf." href="Delete/hapus.php?subzero=<?php echo $submenu; ?>&IDPelanggan=<?php echo $d['IDPelanggan']; ?>"></a>
+                                        <a class="btn btn-danger glyphicon glyphicon-trash" href="Delete/hapus.php?subzero=<?php echo $submenu; ?>&IDPelanggan=<?php echo $d['IDPelanggan']; ?>"></a>
                                     </td>
                                 </tr>
                             <?php

@@ -1,8 +1,15 @@
 <header class="main-header">
-	<a href="#" class="logo">
+	<a href="#" class="logo" style="background-color: #A5D7E8 ;">
 		<span class="logo-lg"><img src="../dist/img/logovertikal.png" style="width: 190px; height: 45px;"></span>
+		<span class="logo-mini"><img src="../dist/img/favikon.png" style="width: 32px; height: 32px;"></span>
 	</a>
-	<nav class="navbar navbar-static-top">
+	<nav class="navbar navbar-static-top" style="background-color: #576CBC;">
+		<a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</a>
 		<div class="navbar-custom-menu">
 			<ul class="nav navbar-nav">
 				<li class="dropdown user user-menu">

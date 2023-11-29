@@ -3,6 +3,7 @@
     <div class="form-group has-feedback">
         <label for="kode" class="col-sm-2 control-label">Username</label>
         <div class="col-sm-9" style="width: 930px">
+            <input type="hidden" class="form-control" name="idpelanggan" value="<?php echo random_int(0, 1000); ?>" />
             <input type="text" class="form-control" placeholder="Username" name="username" />
         </div>
     </div>
@@ -37,6 +38,10 @@
             </button>
             <a href="../index.php?submenu=<?php echo $subzero ?>" class="pull-left btn btn-primary" style="margin-left: 0px">Batal</a>
         </div>
+    </div>
+    <div class="callout callout-info">
+        <h4>Informasi!</h4>
+        <p>Menambahkan pelanggan juga menambahkan dia sebagai penumpang.</p>
     </div>
     <br />
 </form>

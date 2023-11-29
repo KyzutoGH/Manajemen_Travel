@@ -107,16 +107,8 @@ session_start();
                         </div>
                     </section>
                 </div>
-                <footer class="main-footer">
-                    <div class="pull-right hidden-xs">
-                        <b>Version</b> 1.0.0
-                    </div>
-                    <strong>Copyright &copy; 2018 <a href="#">IksanJR</a>.</strong>
-                </footer>
-            </div>
-
-
         <?php
+        include '../../bagian/copyright.php';
         }
     } else {
         ?>
