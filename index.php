@@ -5,26 +5,26 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Agen Travel Rahayu - Home</title>
+  <title>NewBiz Bootstrap Template - Index</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="dist/img/favicon.png" rel="icon">
-  <link href="dist/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="dist/vendor/aos/aos.css" rel="stylesheet">
-  <link href="dist/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="dist/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="dist/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="dist/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="dist/css/style.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: NewBiz
@@ -41,20 +41,20 @@
   <header id="header" class="fixed-top d-flex align-items-center">
     <div class="container d-flex justify-content-between">
 
-      <div class="logo">
+      <div>
         <!-- Uncomment below if you prefer to use an text logo -->
         <!-- <h1><a href="index.html">NewBiz</a></h1> -->
-        <a href="index.html"><img src="assets/img/RAHAYU.png" alt="" class="img-fluid"></a>
+        <a href="index.html"><img src="assets/img/ogol(1).png"></a>
       </div>
 
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">Tentang Kami</a></li>
-          <li><a class="nav-link scrollto" href="#services">Layanan</a></li>
-          <li><a class="nav-link scrollto " href="#portfolio">Armada Kami</a></li>
-          <li><a class="nav-link scrollto" href="#team">Testimoni</a></li>
-          <!--li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link scrollto " href="#transport">transport</a></li>
+          <li><a class="nav-link scrollto" href="#team">Team</a></li>
+          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="#">Drop Down 1</a></li>
               <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
@@ -70,9 +70,8 @@
               <li><a href="#">Drop Down 3</a></li>
               <li><a href="#">Drop Down 4</a></li>
             </ul>
-          </li-->
-          <li><a class="nav-link scrollto" href="#contact">Hubungi Kami</a></li>
-          <li><a class="nav-link scrollto" href="pelanggan/login.php">Login</a></li>
+          </li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -85,14 +84,14 @@
     <div class="container" data-aos="fade-up">
 
       <div class="hero-img" data-aos="zoom-out" data-aos-delay="200">
-        <img src="assets/img/trepelapik.png" width="50%" height="50%" alt="" class="img-fluid">
+        <img src="assets/img/hero-img.svg" alt="" class="img-fluid">
       </div>
 
       <div class="hero-info" data-aos="zoom-in" data-aos-delay="100">
-        <h2>Kami selalu<br>ada untuk <br>perjalanan anda!</h2>
+        <h2>We provide<br><span>travel</span><br>for you!</h2>
         <div>
           <a href="#about" class="btn-get-started scrollto">Get Started</a>
-          <a href="#services" class="btn-services scrollto">Our Services</a>
+          <a href="pelanggan/login.php" class="btn-services scrollto">Book Now!</a>
         </div>
       </div>
 
@@ -107,32 +106,32 @@
 
         <header class="section-header">
           <h3>About Us</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p>Kami adalah agen perjalanan yang berdedikasi untuk memberikan pengalaman liburan terbaik, dengan tim profesional yang siap membantu mewujudkan impian perjalanan Anda.</p>
         </header>
 
         <div class="row about-container">
 
           <div class="col-lg-6 content order-lg-1 order-2">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              Dalam layanan agen perjalanan kami, keandalan dan ketepatan waktu menjadi fokus utama. Kami memastikan cuaca yang nyaman dan sesuai dengan preferensi Anda, serta menyusun jadwal perjalanan yang teratur untuk memaksimalkan pengalaman liburan Anda.
             </p>
 
             <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
               <div class="icon"><i class="bi bi-card-checklist"></i></div>
-              <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
-              <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
+              <h4 class="title"><a href="">Ketepatan Waktu yang Diutamakan</a></h4>
+              <p class="description">Kami mengutamakan ketepatan waktu dalam setiap perjalanan untuk memastikan Anda dapat menikmati setiap momen tanpa khawatir.</p>
             </div>
 
             <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
               <div class="icon"><i class="bi bi-brightness-high"></i></div>
-              <h4 class="title"><a href="">Magni Dolores</a></h4>
-              <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+              <h4 class="title"><a href="">Cuaca yang Nyaman</a></h4>
+              <p class="description">Pemerhatian terhadap kondisi cuaca membantu kami menyajikan pengalaman liburan sesuai dengan keinginan Anda.</p>
             </div>
 
             <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
               <div class="icon"><i class="bi bi-calendar4-week"></i></div>
-              <h4 class="title"><a href="">Dolor Sitema</a></h4>
-              <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+              <h4 class="title"><a href="">Jadwal Perjalanan yang Teratur</a></h4>
+              <p class="description">Dengan jadwal yang terorganisir, kami berusaha memastikan setiap momen berharga Anda teroptimalkan.</p>
             </div>
 
           </div>
@@ -147,12 +146,11 @@
             <img src="assets/img/about-extra-1.svg" class="img-fluid" alt="">
           </div>
           <div class="col-lg-6 pt-5 pt-lg-0" data-aos="fade-left">
-            <h4>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h4>
+            <h4>Layanan Pelanggan 24 Jam Nonstop: Kepuasan Anda Prioritas Utama</h4>
             <p>
-              Ipsum in aspernatur ut possimus sint. Quia omnis est occaecati possimus ea. Quas molestiae perspiciatis occaecati qui rerum. Deleniti quod porro sed quisquam saepe. Numquam mollitia recusandae non ad at et a.
-            </p>
-            <p>
-              Ad vitae recusandae odit possimus. Quaerat cum ipsum corrupti. Odit qui asperiores ea corporis deserunt veritatis quidem expedita perferendis. Qui rerum eligendi ex doloribus quia sit. Porro rerum eum eum.
+              Layanan Pelanggan 24 Jam Nonstop: Kepuasan Anda Prioritas Utama
+
+              Kami menghadirkan layanan call center 24 jam nonstop untuk memberikan dukungan sepanjang waktu. Tim kami yang ramah dan berkompeten siap membantu Anda kapan pun Anda membutuhkannya. Hubungi kami dengan percaya diri, karena kepuasan dan keamanan Anda adalah prioritas utama kami.
             </p>
           </div>
         </div>
@@ -163,20 +161,12 @@
           </div>
 
           <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-right">
-            <h4>Neque saepe temporibus repellat ea ipsum et. Id vel et quia tempora facere reprehenderit.</h4>
+            <h4>Pelayanan Terbaik untuk Perjalanan Tanpa Khawatir</h4>
             <p>
-              Delectus alias ut incidunt delectus nam placeat in consequatur. Sed cupiditate quia ea quis. Voluptas nemo qui aut distinctio. Cumque fugit earum est quam officiis numquam. Ducimus corporis autem at blanditiis beatae incidunt sunt.
-            </p>
-            <p>
-              Voluptas saepe natus quidem blanditiis. Non sunt impedit voluptas mollitia beatae. Qui esse molestias. Laudantium libero nisi vitae debitis. Dolorem cupiditate est perferendis iusto.
-            </p>
-            <p>
-              Eum quia in. Magni quas ipsum a. Quis ex voluptatem inventore sint quia modi. Numquam est aut fuga mollitia exercitationem nam accusantium provident quia.
+              Komitmen kami terletak pada ketepatan waktu dan kenyamanan pelanggan. Tim kami yang berdedikasi berusaha keras untuk menyediakan pelayanan terbaik, siap menghadapi perubahan cuaca dan menjaga fleksibilitas jadwal. Layanan kami tidak hanya mengandalkan keahlian, tapi juga semangat membantu tanpa henti. Jangan ragu untuk mengandalkan kami, karena kami hadir 24/7 untuk memastikan perjalanan Anda berjalan lancar.
             </p>
           </div>
-
         </div>
-
       </div>
     </section><!-- End About Section -->
 
@@ -186,7 +176,7 @@
 
         <header class="section-header">
           <h3>Services</h3>
-          <p>Laudem latine persequeris id sed, ex fabulas delectus quo. No vel partiendo abhorreant vituperatoribus.</p>
+          <p>Siap melayani anda sepenuh hati.</p>
         </header>
 
         <div class="row justify-content-center">
@@ -194,45 +184,47 @@
           <div class="col-md-6 col-lg-5" data-aos="zoom-in" data-aos-delay="100">
             <div class="box">
               <div class="icon"><i class="bi bi-briefcase" style="color: #ff689b;"></i></div>
-              <h4 class="title"><a href="">Lebih Dari Puluhan Armada</a></h4>
-              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+              <h4 class="title"><a href="">Bergabunglah dengan Tim Kami!</a></h4>
+              <p class="description">Dapatkan kesempatan untuk berkarier dalam industri perjalanan bersama kami, dan bantu ciptakan pengalaman liburan tak terlupakan untuk pelanggan.</p>
             </div>
           </div>
           <div class="col-md-6 col-lg-5" data-aos="zoom-in" data-aos-delay="200">
             <div class="box">
               <div class="icon"><i class="bi bi-card-checklist" style="color: #e9bf06;"></i></div>
-              <h4 class="title"><a href="">Jadwal Disesuaikan dengan Prefrensi Anda</a></h4>
-              <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+              <h4 class="title"><a href="">Pelayanan Berkualitas dan Tepat Waktu!</a></h4>
+              <p class="description">Kami berkomitmen untuk memberikan pelayanan yang tidak hanya berkualitas tinggi, tetapi juga tepat waktu.</p>
             </div>
           </div>
 
           <div class="col-md-6 col-lg-5" data-aos="zoom-in" data-aos-delay="100">
             <div class="box">
               <div class="icon"><i class="bi bi-bar-chart" style="color: #3fcdc7;"></i></div>
-              <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-              <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+              <h4 class="title"><a href="">Analisis Mendalam untuk Perjalanan Terbaik!</a></h4>
+              <p class="description">Dukungan kami mencakup analisis yang mendalam untuk memastikan setiap perjalanan Anda memiliki perencanaan yang cermat dan sesuai dengan keinginan.</p>
             </div>
           </div>
           <div class="col-md-6 col-lg-5" data-aos="zoom-in" data-aos-delay="200">
             <div class="box">
               <div class="icon"><i class="bi bi-binoculars" style="color:#41cf2e;"></i></div>
-              <h4 class="title"><a href="">Magni Dolores</a></h4>
-              <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+              <h4 class="title"><a href="">Eksplorasi Tanpa Batas dengan Insight yang Tajam!</a></h4>
+              <p class="description">Layanan kami memberikan wawasan mendalam melalui analisis detail, memungkinkan Anda untuk menjelajahi destinasi dengan persiapan yang matang.
+              </p>
             </div>
           </div>
 
           <div class="col-md-6 col-lg-5" data-aos="zoom-in" data-aos-delay="100">
             <div class="box">
               <div class="icon"><i class="bi bi-brightness-high" style="color: #d6ff22;"></i></div>
-              <h4 class="title"><a href="">Nemo Enim</a></h4>
-              <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+              <h4 class="title"><a href="">Cuaca Optimal untuk Petualangan Tanpa Batas!</a></h4>
+              <p class="description">Kami secara cermat memantau perkembangan cuaca sehingga Anda dapat menikmati perjalanan tanpa khawatir akan kondisi cuaca yang tidak menguntungkan.</p>
             </div>
           </div>
           <div class="col-md-6 col-lg-5" data-aos="zoom-in" data-aos-delay="200">
             <div class="box">
               <div class="icon"><i class="bi bi-calendar4-week" style="color: #4680ff;"></i></div>
-              <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
-              <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
+              <h4 class="title"><a href="">Jadwal yang Terencana, Perjalanan yang Tertata!</a></h4>
+              <p class="description">Kami menyediakan jadwal perjalanan yang terstruktur dengan baik, memastikan setiap detik petualangan Anda terencana dengan sempurna.
+              </p>
             </div>
           </div>
 
@@ -246,7 +238,7 @@
       <div class="container" data-aos="fade-up">
         <header class="section-header">
           <h3>Why choose us?</h3>
-          <p>Laudem latine persequeris id sed, ex fabulas delectus quo. No vel partiendo abhorreant vituperatoribus.</p>
+          <p>Kami Menawarkan Keunggulan Perjalanan yang tak tertandingi!</p>
         </header>
 
         <div class="row row-eq-height justify-content-center">
@@ -255,8 +247,8 @@
             <div class="card" data-aos="zoom-in" data-aos-delay="100">
               <i class="bi bi-calendar4-week"></i>
               <div class="card-body">
-                <h5 class="card-title">Corporis dolorem</h5>
-                <p class="card-text">Deleniti optio et nisi dolorem debitis. Aliquam nobis est temporibus sunt ab inventore officiis aut voluptatibus.</p>
+                <h5 class="card-title">Jadwal Tertata dengan Sempurna</h5>
+                <p class="card-text">Rencanakan perjalanan Anda dengan percaya diri dengan jadwal yang terstruktur dan terencana secara rinci.</p>
                 <a href="#" class="readmore">Read more </a>
               </div>
             </div>
@@ -266,8 +258,8 @@
             <div class="card" data-aos="zoom-in" data-aos-delay="200">
               <i class="bi bi-camera-reels"></i>
               <div class="card-body">
-                <h5 class="card-title">Voluptates dolores</h5>
-                <p class="card-text">Voluptates nihil et quis omnis et eaque omnis sint aut. Ducimus dolorum aspernatur.</p>
+                <h5 class="card-title">Abadikan Setiap Momen</h5>
+                <p class="card-text">Nikmati setiap detik petualangan Anda dengan fotografi berkualitas tinggi, karena kami memahami betapa berharga kenangan perjalanan.</p>
                 <a href="#" class="readmore">Read more </a>
               </div>
             </div>
@@ -277,8 +269,8 @@
             <div class="card" data-aos="zoom-in" data-aos-delay="300">
               <i class="bi bi-chat-square-text"></i>
               <div class="card-body">
-                <h5 class="card-title">Eum ut aspernatur</h5>
-                <p class="card-text">Autem quod nesciunt eos ea aut amet laboriosam ab. Eos quis porro in non nemo ex. </p>
+                <h5 class="card-title">Ulasan Positif dari Pelanggan</h5>
+                <p class="card-text">Dapatkan keyakinan dari ulasan positif pelanggan kami yang telah menikmati layanan perjalanan tak terlupakan bersama kami.</p>
                 <a href="#" class="readmore">Read more </a>
               </div>
             </div>
@@ -318,16 +310,16 @@
       <div class="container" data-aos="fade-up">
 
         <header class="section-header">
-          <h3 class="section-title">Our Portfolio</h3>
+          <h3 class="section-title">Our Transportation</h3>
         </header>
 
         <div class="row" data-aos="fade-up" data-aos-delay="100">
           <div class="col-lg-12">
             <ul id="portfolio-flters">
               <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">App</li>
-              <li data-filter=".filter-card">Card</li>
-              <li data-filter=".filter-web">Web</li>
+              <li data-filter=".filter-app">Darat</li>
+              <li data-filter=".filter-card">Udara</li>
+              <li data-filter=".filter-web">Laut</li>
             </ul>
           </div>
         </div>
@@ -336,12 +328,12 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/app1.jpg" class="img-fluid" alt="">
+              <img src="assets/img/portfolio/rosalia.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4><a href="portfolio-details.html">App 1</a></h4>
-                <p>App</p>
+                <h4><a href="portfolio-details.html">Rosalia Indah</a></h4>
+                <p>Darat</p>
                 <div>
-                  <a href="assets/img/portfolio/app1.jpg" data-gallery="portfolioGallery" title="App 1" class="portfolio-lightbox link-preview"><i class="bi bi-plus"></i></a>
+                  <a href="assets/img/portfolio/rosalia.jpg" data-gallery="portfolioGallery" title="App 1" class="portfolio-lightbox link-preview"><i class="bi bi-plus"></i></a>
                   <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bi bi-link"></i></a>
                 </div>
               </div>
@@ -350,12 +342,12 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/web3.jpg" class="img-fluid" alt="">
+              <img src="assets/img/portfolio/km_mutiara.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4><a href="portfolio-details.html">Web 3</a></h4>
-                <p>Web</p>
+                <h4><a href="portfolio-details.html">KM Mutiara</a></h4>
+                <p>Laut</p>
                 <div>
-                  <a href="assets/img/portfolio/web3.jpg" class="portfolio-lightbox link-preview" data-gallery="portfolioGallery" title="Web 3"><i class="bi bi-plus"></i></a>
+                  <a href="assets/img/portfolio/km_mutiara.jpg" class="portfolio-lightbox link-preview" data-gallery="portfolioGallery" title="Web 3"><i class="bi bi-plus"></i></a>
                   <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bi bi-link"></i></a>
                 </div>
               </div>
@@ -364,10 +356,10 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/app2.jpg" class="img-fluid" alt="">
+              <img src="assets/img/portfolio/tentrem.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4><a href="portfolio-details.html">App 2</a></h4>
-                <p>App</p>
+                <h4><a href="portfolio-details.html">Tentrem</a></h4>
+                <p>Darat</p>
                 <div>
                   <a href="assets/img/portfolio/app2.jpg" class="portfolio-lightbox link-preview" data-gallery="portfolioGallery" title="App 2"><i class="bi bi-plus"></i></a>
                   <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bi bi-link"></i></a>
@@ -378,10 +370,10 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/card2.jpg" class="img-fluid" alt="">
+              <img src="assets/img/portfolio/batik_air.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4><a href="portfolio-details.html">Card 2</a></h4>
-                <p>Card</p>
+                <h4><a href="portfolio-details.html">Batik Air</a></h4>
+                <p>Udara</p>
                 <div>
                   <a href="assets/img/portfolio/card2.jpg" class="portfolio-lightbox link-preview" data-gallery="portfolioGallery" title="Card 2"><i class="bi bi-plus"></i></a>
                   <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bi bi-link"></i></a>
@@ -392,12 +384,12 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/web2.jpg" class="img-fluid" alt="">
+              <img src="assets/img/portfolio/km_kelimutu.webp" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4><a href="portfolio-details.html">Web 2</a></h4>
-                <p>Web</p>
+                <h4><a href="portfolio-details.html">KM Kelimutu</a></h4>
+                <p>Laut</p>
                 <div>
-                  <a href="assets/img/portfolio/web2.jpg" class="portfolio-lightbox link-preview" data-gallery="portfolioGallery" title="Web 2"><i class="bi bi-plus"></i></a>
+                  <a href="assets/img/portfolio/km_kelimutu.webp" class="portfolio-lightbox link-preview" data-gallery="portfolioGallery" title="Web 2"><i class="bi bi-plus"></i></a>
                   <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bi bi-link"></i></a>
                 </div>
               </div>
@@ -406,12 +398,12 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/app3.jpg" class="img-fluid" alt="">
+              <img src="assets/img/portfolio/bagong.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4><a href="portfolio-details.html">App 3</a></h4>
-                <p>App</p>
+                <h4><a href="portfolio-details.html">Bagong</a></h4>
+                <p>Darat</p>
                 <div>
-                  <a href="assets/img/portfolio/app3.jpg" class="portfolio-lightbox link-preview" data-gallery="portfolioGallery" title="App 3"><i class="bi bi-plus"></i></a>
+                  <a href="assets/img/portfolio/bagong.jpg" class="portfolio-lightbox link-preview" data-gallery="portfolioGallery" title="App 3"><i class="bi bi-plus"></i></a>
                   <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bi bi-link"></i></a>
                 </div>
               </div>
@@ -420,12 +412,12 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/card1.jpg" class="img-fluid" alt="">
+              <img src="assets/img/portfolio/garuda_indonesia.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4><a href="portfolio-details.html">Card 1</a></h4>
-                <p>Card</p>
+                <h4><a href="portfolio-details.html">Garuda Indonesia</a></h4>
+                <p>Udara</p>
                 <div>
-                  <a href="assets/img/portfolio/card1.jpg" class="portfolio-lightbox link-preview" data-gallery="portfolioGallery" title="Card 1"><i class="bi bi-plus"></i></a>
+                  <a href="assets/img/portfolio/garuda_indonesia.jpg" class="portfolio-lightbox link-preview" data-gallery="portfolioGallery" title="Card 1"><i class="bi bi-plus"></i></a>
                   <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bi bi-link"></i></a>
                 </div>
               </div>
@@ -434,10 +426,10 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/card3.jpg" class="img-fluid" alt="">
+              <img src="assets/img/portfolio/lion_air.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4><a href="portfolio-details.html">Card 3</a></h4>
-                <p>Card</p>
+                <h4><a href="portfolio-details.html">Lion Air</a></h4>
+                <p>Udara</p>
                 <div>
                   <a href="assets/img/portfolio/card3.jpg" class="portfolio-lightbox link-preview" data-gallery="portfolioGallery" title="Card 3"><i class="bi bi-plus"></i></a>
                   <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bi bi-link"></i></a>
@@ -448,13 +440,13 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/web1.jpg" class="img-fluid" alt="">
+              <img src="assets/img/portfolio/km_leuser.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4><a href="portfolio-details.html">Web 1</a></h4>
-                <p>Web</p>
+                <h4><a href="portfolio-details.html">KM Leuser</a></h4>
+                <p>Laut</p>
                 <div>
-                  <a href="assets/img/portfolio/web1.jpg" class="portfolio-lightbox link-preview" data-gallery="portfolioGallery" title="Web 1"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bi bi-link"></i></a>
+                  <a href="assets/img/portfolio/km_leuser.jpg" class="transport-lightbox link-preview" data-gallery="transportGallery" title="Web 1"><i class="bi bi-plus"></i></a>
+                  <a href="transport-details.html" class="link-details" title="More Details"><i class="bi bi-link"></i></a>
                 </div>
               </div>
             </div>
@@ -463,7 +455,7 @@
         </div>
 
       </div>
-    </section><!-- End Portfolio Section -->
+    </section><!-- End transport Section -->
 
     <!-- ======= Testimonials Section ======= -->
     <section id="testimonials" class="section-bg">
@@ -485,7 +477,7 @@
                     <h3>Saul Goodman</h3>
                     <h4>Ceo &amp; Founder</h4>
                     <p>
-                      Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                      Saya sangat terkesan dengan pelayanan yang diberikan oleh agen travel ini. Mereka benar-benar membuat liburan saya tak terlupakan. Semua terorganisir dengan baik, mulai dari akomodasi hingga kegiatan. Terima kasih, agen travel terbaik!
                     </p>
                   </div>
                 </div><!-- End testimonial item -->
@@ -496,7 +488,7 @@
                     <h3>Sara Wilsson</h3>
                     <h4>Designer</h4>
                     <p>
-                      Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                      Agen travel ini sungguh luar biasa! Pekerjaan tim profesionalnya terlihat dari cara mereka menanggapi pertanyaan saya dengan cepat dan memberikan solusi terbaik. Saya sangat merekomendasikan kepada siapa saja yang mencari layanan perjalanan berkualitas.
                     </p>
                   </div>
                 </div><!-- End testimonial item -->
@@ -507,7 +499,7 @@
                     <h3>Jena Karlis</h3>
                     <h4>Store Owner</h4>
                     <p>
-                      Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                      Saya ingin berterima kasih atas perjalanan yang dikelola dengan begitu baik. Semua jadwal dan kebutuhan kami dipenuhi tanpa kendala. Agen travel ini memberikan layanan yang luar biasa dan memberikan nilai lebih untuk setiap momen perjalanan.
                     </p>
                   </div>
                 </div><!-- End testimonial item -->
@@ -518,7 +510,7 @@
                     <h3>Matt Brandon</h3>
                     <h4>Freelancer</h4>
                     <p>
-                      Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                      Perjalanan bersama agen ini memberikan lebih dari yang saya harapkan. Fotografer mereka tidak hanya ahli dalam mengabadikan momen-momen indah, tetapi juga mampu menangkap esensi dan kegembiraan kami. Saya sangat puas dengan hasilnya!
                     </p>
                   </div>
                 </div><!-- End testimonial item -->
@@ -529,7 +521,7 @@
                     <h3>John Larson</h3>
                     <h4>Entrepreneur</h4>
                     <p>
-                      Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+                      Setelah mencoba beberapa agen travel, saya akhirnya menemukan yang terbaik! Pelayanan yang ramah, jadwal yang terencana dengan baik, dan rekomendasi destinasi yang tepat membuat setiap perjalanan bersama mereka selalu istimewa. Tak sabar untuk merencanakan petualangan berikutnya!
                     </p>
                   </div>
                 </div><!-- End testimonial item -->
@@ -549,7 +541,7 @@
       <div class="container" data-aos="fade-up">
         <div class="section-header">
           <h3>Team</h3>
-          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+          <p>Bertemu dengan tim profesional kami yang berdedikasi untuk memberikan pengalaman liburan terbaik bagi Anda.</p>
         </div>
 
         <div class="row">
@@ -835,16 +827,16 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="dist/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="dist/vendor/aos/aos.js"></script>
-  <script src="dist/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="dist/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="dist/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="dist/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="dist/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="dist/js/main.js"></script>
+  <script src="assets/js/main.js"></script>
 
 </body>
 

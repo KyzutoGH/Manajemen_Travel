@@ -29,10 +29,11 @@
             include("../../bagian/koneksi.php");
 
             $id = $_GET['IDPelanggan'];
-            $sqlPelanggan = mysqli_query($koneksi, "SELECT NamaPelanggan FROM Pelanggan WHERE IDPelanggan='$id';");
+            $sqlPelanggan = mysqli_query($koneksi, "SELECT * FROM Pelanggan WHERE IDPelanggan='$id';");
 
             while ($d = mysqli_fetch_array($sqlPelanggan)) {
             ?>
+                <input type="hidden" name="idpelanggan" value="<?php echo $d['IDPelanggan']; ?>">
                 <input type="text" class="form-control" name="namapelanggan" value="<?php echo $d['NamaPelanggan']; ?>" disabled>
         </div>
     </div>

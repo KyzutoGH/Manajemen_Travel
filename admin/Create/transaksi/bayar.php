@@ -1,4 +1,3 @@
-
 <?php
 // Include necessary files and connect to the database
 include("../../bagian/koneksi.php");
@@ -14,7 +13,7 @@ if (isset($_POST['bayar'])) {
     // Process the payment (you may want to implement a payment gateway integration here)
 
     // Insert the transaction data into the database
-    $sqlInsert = "INSERT INTO Transaksi (IDJadwal, IDPelanggan, JumlahPenumpang, TotalHarga) VALUES ('$idJadwal', '$idPelanggan', '$jumlahPenumpang', '$totalHarga')";
+    $sqlInsert = "INSERT INTO Transaksi (IDPelanggan, IDJadwal, TanggalTransaksi, TotalHarga) VALUES ('$idJadwal', '$idPelanggan', '$jumlahPenumpang', '$totalHarga')";
     mysqli_query($koneksi, $sqlInsert);
 }
 ?>
@@ -33,15 +32,16 @@ if (isset($_POST['bayar'])) {
             $sqlJadwal = mysqli_query($koneksi, "SELECT armada.NamaArmada, armada.Jenis, jadwal.IDJadwal, jadwal.Asal, jadwal.Tujuan, jadwal.Kelas, jadwal.TanggalBerangkat, jadwal.JamBerangkat, jadwal.JamTiba, jadwal.Harga, jadwal.Diskon FROM armada JOIN jadwal ON armada.IDArmada = Jadwal.IDArmada;");
             $rowJadwal = mysqli_fetch_assoc($sqlJadwal);
 
+            // Store the totalHarga in a variable for later use
+            $totalHarga = $rowJadwal['Harga'] * $_POST['jumlah_penumpang'];
+
             echo "Armada: " . $rowJadwal['NamaArmada'] . "<br>";
             echo "Jenis: " . $rowJadwal['Jenis'] . "<br>";
             echo "Asal: " . $rowJadwal['Asal'] . "<br>";
             echo "Tujuan: " . $rowJadwal['Tujuan'] . "<br>";
             echo "Tanggal Berangkat: " . $rowJadwal['TanggalBerangkat'] . "<br>";
-            echo "Harga: " . $rowJadwal['Harga'] . "<br>";
-            
-            // Store the totalHarga in a variable for later use
-            $totalHarga = $rowJadwal['Harga'];
+            echo "Harga: " . $totalHarga . "<br>";
+
             ?>
         </div>
     </div>
@@ -57,6 +57,27 @@ if (isset($_POST['bayar'])) {
             $rowPelanggan = mysqli_fetch_assoc($sqlPelanggan);
 
             echo "Nama Pelanggan: " . $rowPelanggan['NamaPelanggan'] . "<br>";
+
+            $jumlahPenumpang = $_POST['jumlah_penumpang'];
+
+            for ($i = 1; $i <= $jumlahPenumpang; $i++) {
+                $selectedPenumpangKey = "idpenumpang_" . $i;
+
+                // Check if the selected value for the current passenger exists
+                if (isset($_POST[$selectedPenumpangKey])) {
+                    $selectedPenumpangID = $_POST[$selectedPenumpangKey];
+
+                    // Fetch the name corresponding to the selected ID from the database
+                    $sqlPenumpang = mysqli_query($koneksi, "SELECT NamaPenumpang FROM penumpang WHERE IDPenumpang='$selectedPenumpangID'");
+                    $rowPenumpang = mysqli_fetch_assoc($sqlPenumpang);
+
+                    // Display the name
+                    $selectedPenumpangName = $rowPenumpang['NamaPenumpang'];
+                    echo "Nama Penumpang $i: $selectedPenumpangName <br>";
+                }
+            }
+
+
             ?>
         </div>
     </div>
@@ -74,7 +95,7 @@ if (isset($_POST['bayar'])) {
 
     <script>
         // Add input fields for each passenger based on the selected quantity (up to 8)
-        document.querySelector('input[name="jumlah_penumpang"]').addEventListener('change', function () {
+        document.querySelector('input[name="jumlah_penumpang"]').addEventListener('change', function() {
             const quantity = parseInt(this.value);
             const maxPassengers = 8; // Set the maximum number of passengers
 

@@ -21,9 +21,16 @@
 						<li class="user-header">
 							<img src="../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 							<p><?php echo $_SESSION['user']; ?></p>
-							<p><small>Admin</small></p>
+							<p><small><?php echo $_SESSION['role'];?></small></p>
 						</li>
 						<li class="user-footer">
+							<?php if ($_SESSION['role'] == 'pelanggan') {
+							?>
+								<div class="pull-left">
+									<a href="index.php?submenu=Akun" class="btn btn-default btn-flat">Informasi Akun</a>
+								</div>
+							<?php
+							} ?>
 							<div class="pull-right">
 								<a href="logout.php" class="btn btn-default btn-flat">Keluar</a>
 							</div>

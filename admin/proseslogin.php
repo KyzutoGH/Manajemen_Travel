@@ -23,7 +23,7 @@ if($cek > 0){
     // buat session login dan username
     $_SESSION['user'] = $user;
     $_SESSION['status'] = "login";
-    $akses = "Admin";
+    $_SESSION['role'] = "admin";
     // alihkan ke halaman dashboard admin
     header("location:../admin/index.php?submenu=Armada");
 }else{

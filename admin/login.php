@@ -1,6 +1,6 @@
 <?php
 include '../bagian/koneksi.php';
-$judul_browser = "Aplikasi Travel Gatel - Administrator";
+$judul_browser = "Travel Agent Apps - Alpha";
 include '../bagian/kepala.php';
 ?>
 <body class="hold-transition login-page">

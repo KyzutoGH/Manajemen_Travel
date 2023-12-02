@@ -11,7 +11,7 @@ $pass = $_POST['pass'];
  
  
 // menyeleksi data user dengan username dan password yang sesuai
-$login = mysqli_query($koneksi,"select * from pelanggan where username='$user' and password='$pass'");
+$login = mysqli_query($koneksi,"select * from pelanggan where Username='$user' and Password='$pass'");
 // menghitung jumlah data yang ditemukan
 $cek = mysqli_num_rows($login);
  
@@ -23,9 +23,9 @@ if($cek > 0){
     // buat session login dan username
     $_SESSION['user'] = $user;
     $_SESSION['status'] = "login";
-    $akses = "Admin";
+    $_SESSION['role'] = "pelanggan";
     // alihkan ke halaman dashboard admin
-    header("location:../pelanggan/index.php");
+    header("location:../pelanggan/index.php?submenu=Jadwal");
 }else{
   echo "ERROR 2";
 }

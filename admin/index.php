@@ -1,5 +1,5 @@
 <?php
-$judul_browser = "Administrator - Aplikasi Travel Gatel";
+$judul_browser = "Travel Agent Apps - Alpha";
 include '../bagian/koneksi.php';
 $menu = isset($_GET['menu']) ? $_GET['menu'] : '';
 $submenu = isset($_GET['submenu']) ? $_GET['submenu'] : '';
