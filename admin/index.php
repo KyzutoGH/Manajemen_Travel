@@ -36,7 +36,7 @@ include '../bagian/saitel.php';
 			} elseif ($submenu == "Detail") {
 				include 'Read/detail.php';
 			} else {
-				include 'TheHandler/tabel404.php';
+				include '../TheHandler/tabel404.php';
 			}
 			include '../bagian/copyright.php';
 		}

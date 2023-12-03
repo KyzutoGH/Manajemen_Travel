@@ -46,12 +46,14 @@ include '../bagian/kepala.php';
                 include 'perjalanan/jadwal.php';
             } elseif ($submenu == "Pencarian") {
                 include 'perjalanan/carijadwal.php';
-            } elseif ($submenu == "Transaksi") {
+            } elseif ($submenu == "Dicarikan") {
+                include 'perjalanan/jadwalfind.php';
+            }  elseif ($submenu == "Transaksi") {
                 include 'transaksi/transaksi.php';
             } elseif ($submenu == "Akun") {
                 include 'akun/akun.php';
             } else {
-                include 'TheHandler/tabel404.php';
+                include '../TheHandler/tabel404.php';
             }
             include '../bagian/copyright.php';
         }
