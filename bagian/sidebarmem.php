@@ -8,7 +8,7 @@
             ?>
             <li class="<?= $armadaActive ?>">
                 <a href="<?= isset($subzero) && ($subzero == "Jadwal" || $subzero == "Pencarian") ? '..' : '.' ?>/index.php?submenu=Jadwal">
-                    <i class="fa fa-bus text-aqua"></i> Data Perjalanan
+                    <i class="fa fa-bus text-aqua"></i> <span>Data Perjalanan</span>
                 </a>
             </li>
 
