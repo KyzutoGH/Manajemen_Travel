@@ -22,6 +22,7 @@ if($cek > 0){
  
     // buat session login dan username
     $_SESSION['user'] = $user;
+    $_SESSION['idpelanggan'] = $data['IDPelanggan'];
     $_SESSION['status'] = "login";
     $_SESSION['role'] = "pelanggan";
     // alihkan ke halaman dashboard admin

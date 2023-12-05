@@ -52,6 +52,10 @@ include '../bagian/kepala.php';
                 include 'transaksi/transaksi.php';
             } elseif ($submenu == "Akun") {
                 include 'akun/akun.php';
+            } elseif ($submenu == "Pesan") {
+                include 'pemesanan/setpnp.php';
+            } elseif ($submenu == "Bayar") {
+                include 'pemesanan/bayar.php';
             } else {
                 include '../TheHandler/tabel404.php';
             }

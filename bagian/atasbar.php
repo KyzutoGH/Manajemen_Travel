@@ -27,7 +27,7 @@
 							<?php if ($_SESSION['role'] == 'pelanggan') {
 							?>
 								<div class="pull-left">
-									<a href="index.php?submenu=Akun" class="btn btn-default btn-flat">Informasi Akun</a>
+									<a href="index.php?submenu=Akun&IDPelanggan=<?php echo $_SESSION['idpelanggan']; ?>" class="btn btn-default btn-flat">Informasi Akun</a>
 								</div>
 							<?php
 							} ?>

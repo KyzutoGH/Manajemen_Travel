@@ -16,7 +16,7 @@
                     <div class="box-body">
                         <center><img src="../dist/img/404.jpg" alt="Gagal" width="35%" height="35%"></center>
                         <center>
-                            <h1>Sepertinya Tabel Gagal Dimuat. Kembali ke <a href="../admin/index.php?submenu=Jadwal">Sini</a></h1>
+                            <h1>Sepertinya Tabel Gagal Dimuat. Kembali ke <a href="../pelanggan/index.php?submenu=Jadwal">Sini</a></h1>
                         </center>
                     </div>
                     <!-- /.box-body -->

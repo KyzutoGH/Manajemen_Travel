@@ -9,17 +9,10 @@
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <link rel="stylesheet" href="../dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
-  <link rel="stylesheet" href="../dist/css/sweetalert2.min.css">
+  <!-- <link rel="stylesheet" href="../dist/css/sweetalert2.min.css"> -->
 
   <link rel="stylesheet" href="../dist/css/font-awesome.min.css">
   <link rel="stylesheet" href="../dist/css/ionicons.min.css">
   <link rel="stylesheet" href="../dist/css/_all-skins.min.css">
-
-  <!-- DataTables CSS -->
-  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
-
-  <!-- Bootstrap DataTables CSS -->
-  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap.min.css">
-
 
 </head>

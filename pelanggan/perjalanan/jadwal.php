@@ -209,7 +209,7 @@
                                                         ?>
                                                     </td>
                                                     <td>
-                                                        <a class="col-xs-offset-1 btn btn-success fa fa-money" href="index.php?submenu=Pesan&IDJadwal=<?php echo $d['IDJadwal']; ?>"></a>
+                                                        <a class="col-xs-offset-1 btn btn-success fa fa-money" href="index.php?submenu=Pesan&IDPelanggan=<?php echo $_SESSION['idpelanggan'];?>&IDJadwal=<?php echo $d['IDJadwal']; ?>"></a>
                                                     </td>
                                                 </tr>
                                             <?php
