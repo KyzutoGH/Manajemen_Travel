@@ -11,7 +11,7 @@
             <div class="col-xs-12">
                 <div class="box">
                     <div class="box-header">
-                        <a href="Create/tambah.php?subzero=<?php echo $submenu; ?>" class="btn btn-primary" role="button"><b>+</b> Tambah Transaksi (Non-Pelanggan)</a>
+                        <!-- <a href="Create/tambah.php?subzero=<?php echo $submenu; ?>" class="btn btn-primary" role="button"><b>+</b> Tambah Transaksi (Non-Pelanggan)</a> -->
                     </div>
                     <div class="box-body">
                         <table id="example2" class="table table-bordered table-hover">
@@ -22,6 +22,7 @@
                                     <th>Perjalanan</th>
                                     <th>Tanggal Transaksi</th>
                                     <th>Harga</th>
+                                    <th>Bukti</th>
                                     <th>Status</th>
                                     <th>Aksi</th>
                                 </tr>
@@ -30,6 +31,7 @@
                                 <?php
                                 $no = 1;
                                 $data = mysqli_query($koneksi, "SELECT j.IDJadwal,
+                                t.BuktiTransaksi,
                                 a.NamaArmada,
                                 j.Asal,
                                 j.Tujuan,
@@ -67,9 +69,9 @@
                                             $timestamp = strtotime($tanggalBerangkat);
 
                                             $bulan = array(
-                                                    1 => "JAN", 2 => "FEB", 3 => "MAR", 4 => "APR", 5 => "MEI", 6 => "JUN",
-                                                    7 => "JUL", 8 => "AGU", 9 => "SEP", 10 => "OKT", 11 => "NOV", 12 => "DES"
-                                                );
+                                                1 => "JAN", 2 => "FEB", 3 => "MAR", 4 => "APR", 5 => "MEI", 6 => "JUN",
+                                                7 => "JUL", 8 => "AGU", 9 => "SEP", 10 => "OKT", 11 => "NOV", 12 => "DES"
+                                            );
 
                                             $tanggalFormatted = date('d', $timestamp) . ' ' . $bulan[date('n', $timestamp)] . ' ' . date('Y', $timestamp);
 
@@ -103,6 +105,27 @@
                                             }
                                             ?>
                                         </td>
+                                        <td>
+                                            <button class="btn btn-primary" data-toggle="modal" data-target="#imageModal" onclick="showImage()">Tampilkan Bukti</button>
+                                        </td>
+                                        <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="imageModalLabel">Bukti Transaksi</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <img id="modalImage" src="../dist/img/trxs/<?php echo $d['BuktiTransaksi'];?>.jpg" alt="Tidak Ada Bukti" style="max-width: 100%; height: auto;">
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                         <td>
                                             <span class="<?php echo ($d['Status'] == 'Belum Dibayar') ? 'label label-danger' : (($d['Status'] == 'Dibayar') ? 'label label-warning' : (($d['Status'] == 'Dibatalkan') ? 'label label-success' : '')); ?>">
                                                 <?php echo $d['Status']; ?></span>
@@ -142,5 +165,11 @@
         } else if (action === 'batalkan') {
             window.location.href = 'update/transaksi/batal.php?idtrx=<?php echo $d["ID Transaksi"]; ?>';
         }
+    }
+    // JavaScript
+    function showImage() {
+
+        // Menampilkan modal
+        $('#imageModal').modal('show');
     }
 </script>
