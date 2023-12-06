@@ -10,14 +10,11 @@
         <div class="row">
             <div class="col-xs-12">
                 <div class="box">
-                    <div class="box-header">
-                    </div>
                     <div class="box-body">
                         <table id="example2" class="table table-bordered table-hover">
                             <thead>
                                 <tr>
                                     <th>No</th>
-                                    <th>Pelanggan</th>
                                     <th>Perjalanan</th>
                                     <th>Tanggal Transaksi</th>
                                     <th>Harga</th>
@@ -29,49 +26,46 @@
                                 <?php
                                 $no = 1;
                                 $data = mysqli_query($koneksi, "SELECT j.IDJadwal,
-                                a.NamaArmada,
-                                j.Asal,
-                                j.Tujuan,
-                                t.IDTransaksi AS 'ID Transaksi',
-                                p.NamaPelanggan AS 'Nama Pelanggan',
-                                CONCAT(SUBSTRING(a.NamaArmada, 1, 3), SUBSTRING(j.Asal, 1, 3), SUBSTRING(j.Tujuan, 1, 3)) AS 'Perjalanan',
-                                t.TanggalTransaksi AS 'Tanggal Transaksi',
-                                t.TotalHarga AS 'Harga',
-                                j.Diskon AS 'Diskon',
-                                t.StatusTransaksi AS 'Status',
-                                COUNT(tp.IDPenumpang) AS 'Jumlah Penumpang'
-                            FROM 
-                                transaksi t
-                            JOIN 
-                                pelanggan p ON t.IDPelanggan = p.IDPelanggan
-                            JOIN 
-                                jadwal j ON t.IDJadwal = j.IDJadwal
-                            JOIN 
-                                armada a ON j.IDArmada = a.IDArmada
-                            LEFT JOIN
-                                detailtransaksi tp ON t.IDTransaksi = tp.IDTransaksi
-                            GROUP BY 
-                                t.IDTransaksi, p.NamaPelanggan, j.Diskon, t.StatusTransaksi
-                            ");
+                                    t.IDTransaksi,
+                                    a.NamaArmada,
+                                    j.Asal,
+                                    j.Tujuan,
+                                    t.BuktiTransaksi,
+                                    t.IDTransaksi AS 'ID Transaksi',
+                                    p.NamaPelanggan AS 'Nama Pelanggan',
+                                    CONCAT(SUBSTRING(a.NamaArmada, 1, 3), SUBSTRING(j.Asal, 1, 3), SUBSTRING(j.Tujuan, 1, 3)) AS 'Perjalanan',
+                                    t.TanggalTransaksi AS 'Tanggal Transaksi',
+                                    t.TotalHarga AS 'Harga',
+                                    j.Diskon AS 'Diskon',
+                                    t.StatusTransaksi AS 'Status',
+                                    COUNT(tp.IDPenumpang) AS 'Jumlah Penumpang'
+                                FROM 
+                                    transaksi t
+                                JOIN 
+                                    pelanggan p ON t.IDPelanggan = p.IDPelanggan
+                                JOIN 
+                                    jadwal j ON t.IDJadwal = j.IDJadwal
+                                JOIN 
+                                    armada a ON j.IDArmada = a.IDArmada
+                                LEFT JOIN
+                                    detailtransaksi tp ON t.IDTransaksi = tp.IDTransaksi
+                                GROUP BY 
+                                    t.IDTransaksi, p.NamaPelanggan, j.Diskon, t.StatusTransaksi
+                                ");
 
                                 while ($d = mysqli_fetch_array($data)) {
                                 ?>
                                     <tr>
                                         <td><?php echo $no++; ?></td>
-                                        <td><a href="index.php?submenu=Detail&idtrx=<?php echo $d['ID Transaksi'] ?>"><?php echo $d['Nama Pelanggan']; ?></a></td>
                                         <td><a href="index.php?submenu=Jadwal&idjadwal=<?php echo $d['IDJadwal']; ?>" title="<?php echo $d['NamaArmada'] . ' - ' . $d['Asal'] . ' - ' . $d['Tujuan']; ?>"><?php echo $d['Perjalanan']; ?></a></td>
                                         <td>
                                             <?php
-                                            $tanggalBerangkat = $d['Tanggal Transaksi'];
-                                            $timestamp = strtotime($tanggalBerangkat);
-
+                                            $timestamp = strtotime($d['Tanggal Transaksi']);
                                             $bulan = array(
-                                                    1 => "JAN", 2 => "FEB", 3 => "MAR", 4 => "APR", 5 => "MEI", 6 => "JUN",
-                                                    7 => "JUL", 8 => "AGU", 9 => "SEP", 10 => "OKT", 11 => "NOV", 12 => "DES"
-                                                );
-
+                                                1 => "JAN", 2 => "FEB", 3 => "MAR", 4 => "APR", 5 => "MEI", 6 => "JUN",
+                                                7 => "JUL", 8 => "AGU", 9 => "SEP", 10 => "OKT", 11 => "NOV", 12 => "DES"
+                                            );
                                             $tanggalFormatted = date('d', $timestamp) . ' ' . $bulan[date('n', $timestamp)] . ' ' . date('Y', $timestamp);
-
                                             echo $tanggalFormatted;
                                             ?>
                                         </td>
@@ -79,26 +73,15 @@
                                             <?php
                                             $harga = $d['Harga'];
                                             $diskon = $d['Diskon'];
-                                            $jumlahPenumpang = $d['Jumlah Penumpang']; // Ganti dengan kode yang mengambil jumlah penumpang
+                                            $jumlahPenumpang = $d['Jumlah Penumpang'];
 
-                                            // Menghitung harga setelah diskon
                                             $hargaSetelahDiskon = $harga - ($harga * ($diskon / 100));
-
-                                            if ($jumlahPenumpang == 0) {
-                                                // Menghitung total harga berdasarkan jumlah penumpang
-                                                $totalHarga = $hargaSetelahDiskon * 1;
-                                            } elseif ($jumlahPenumpang != 0) {
-                                                $totalHarga = $hargaSetelahDiskon * $jumlahPenumpang;
-                                            }
+                                            $totalHarga = ($jumlahPenumpang == 0) ? $hargaSetelahDiskon : $hargaSetelahDiskon * $jumlahPenumpang;
 
                                             if ($diskon == 0) {
-                                                // Menampilkan total harga dengan format rupiah
                                                 echo 'Rp ' . number_format($totalHarga, 0, ',', '.');
                                             } elseif ($diskon != 0) {
-                                                // Menampilkan harga asli yang dicoret
-                                                echo '<del>Rp ' . number_format($harga * $jumlahPenumpang, 0, ',', '.') . '</del>';
-                                                // Menampilkan total harga dengan format rupiah
-                                                echo '<br>Rp ' . number_format($totalHarga, 0, ',', '.');
+                                                echo '<del>Rp ' . number_format($harga * $jumlahPenumpang, 0, ',', '.') . '</del><br>Rp ' . number_format($totalHarga, 0, ',', '.');
                                             }
                                             ?>
                                         </td>
@@ -107,17 +90,62 @@
                                                 <?php echo $d['Status']; ?></span>
                                         </td>
                                         <td>
-                                            <?php if ($d['Status'] === 'Dibatalkan') { ?>
-                                                <span class="label label-danger">Transaksi Dibatalkan</span>
-
-                                            <?php } elseif ($d['Status'] === 'Dibayar') { ?>
-                                                <span class="label label-success">Transaksi Sudah Dibayar</span>
-                                            <?php } else { ?>
-                                                <a class="col-xs-offset-1" href="Update/transaksi/bayar.php?idtrx=<?php echo $d['ID Transaksi']; ?>"><span class="label label-success">Konfirmasi</span></a>
-                                                <a class="col-xs-offset-1" href="Update/transaksi/batal.php?idtrx=<?php echo $d['ID Transaksi']; ?>"><span class="label label-danger">Batalkan</span></a>
-                                            <?php } ?>
+                                            <?php if (empty($d['BuktiTransaksi'])) : ?>
+                                                <!-- Tombol "Kirim Bukti" -->
+                                                <button class="btn btn-primary" data-toggle="modal" data-target="#imageModal_<?php echo isset($d['IDTransaksi']) ? $d['IDTransaksi'] : ''; ?>" onclick="showImage()"><span class="fa-file-image-o"></span></button>
+                                            <?php else : ?>
+                                                <!-- Jika bukti transaksi sudah ada -->
+                                                <div>
+                                                    <button class="btn btn-primary pull-left" data-toggle="modal" data-target="#imageModal" onclick="showImage()"><span class="fa fa-folder-open"></span></button>
+                                                    <button class="btn btn-success pull-right" data-toggle="modal" data-target="#buktiTRX" onclick="showBukti()"><span class="fa fa-file-image-o"></span></button>
+                                                </div>
+                                            <?php endif; ?>
                                         </td>
                                     </tr>
+                                    <!-- Modal for each row Lihat Bukti -->
+                                    <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="imageModalLabel">Bukti Transaksi</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                        <!-- Jika bukti transaksi sudah ada -->
+                                                        <img id="modalImage" src="../dist/img/trxs/<?php echo $d['BuktiTransaksi']; ?>" alt="Tidak Ada Bukti" style="max-width: 100%; height: auto;">
+                                                        <p>Bukti transaksi sudah terunggah.</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Modal for each row Kirim Bukti-->
+                                    <div class="modal fade" id="buktiTRX" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="imageModalLabel">Bukti Transaksi</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                        <!-- Formulir upload bukti transaksi -->
+                                                        <form action="transaksi/uploadbukti.php" method="post" enctype="multipart/form-data">
+                                                            <input type="file" name="file" required>
+                                                            <input type="hidden" name="IDTransaksi" value="<?php echo $d['IDTransaksi']; ?>">
+                                                            <button type="submit" name="simpan" class="btn btn-success">Kirim Bukti</button>
+                                                        </form>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 <?php
                                 }
                                 ?>
@@ -131,15 +159,8 @@
     </section>
 </div>
 <script>
-    function performAction(action, $id) {
-        if (action === 'detail') {
-            window.location.href = 'detail.php?subzero=<?php echo $submenu; ?>&idtransaksi=' + id;
-
-        } else if (action === 'konfirmasi') {
-            window.location.href = 'update/transaksi/bayar.php?idtrx=<?php echo $d["ID Transaksi"]; ?>';
-
-        } else if (action === 'batalkan') {
-            window.location.href = 'update/transaksi/batal.php?idtrx=<?php echo $d["ID Transaksi"]; ?>';
-        }
+    function showImage() {
+        // Menampilkan modal
+        $('#imageModal_').modal('show');
     }
 </script>
