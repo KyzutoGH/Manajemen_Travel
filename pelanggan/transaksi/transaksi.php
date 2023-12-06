@@ -95,9 +95,13 @@
                                                 <button class="btn btn-primary" data-toggle="modal" data-target="#imageModal_<?php echo isset($d['IDTransaksi']) ? $d['IDTransaksi'] : ''; ?>" onclick="showImage()"><span class="fa-file-image-o"></span></button>
                                             <?php else : ?>
                                                 <!-- Jika bukti transaksi sudah ada -->
-                                                <div>
-                                                    <button class="btn btn-primary pull-left" data-toggle="modal" data-target="#imageModal" onclick="showImage()"><span class="fa fa-folder-open"></span></button>
-                                                    <button class="btn btn-success pull-right" data-toggle="modal" data-target="#buktiTRX" onclick="showBukti()"><span class="fa fa-file-image-o"></span></button>
+                                                <div class="btn-group">
+                                                    <button class="btn btn-primary" data-toggle="modal" data-target="#imageModal" onclick="showImage()">
+                                                        <span class="fa fa-folder-open"></span> Lihat Bukti
+                                                    </button>
+                                                    <button class="btn btn-success" data-toggle="modal" data-target="#buktiTRX" onclick="showBukti()" style="margin-left: 10px;">
+                                                        <span class="fa fa-file-image-o"></span> Kirim Bukti
+                                                    </button>
                                                 </div>
                                             <?php endif; ?>
                                         </td>
@@ -113,9 +117,9 @@
                                                     </button>
                                                 </div>
                                                 <div class="modal-body">
-                                                        <!-- Jika bukti transaksi sudah ada -->
-                                                        <img id="modalImage" src="../dist/img/trxs/<?php echo $d['BuktiTransaksi']; ?>" alt="Tidak Ada Bukti" style="max-width: 100%; height: auto;">
-                                                        <p>Bukti transaksi sudah terunggah.</p>
+                                                    <!-- Jika bukti transaksi sudah ada -->
+                                                    <img id="modalImage" src="../dist/img/trxs/<?php echo $d['BuktiTransaksi']; ?>" alt="Tidak Ada Bukti" style="max-width: 100%; height: auto;">
+                                                    <p>Bukti transaksi sudah terunggah.</p>
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
@@ -134,21 +138,21 @@
                                                     </button>
                                                 </div>
                                                 <div class="modal-body">
-                                                        <!-- Formulir upload bukti transaksi -->
-                                                        <form action="transaksi/uploadbukti.php" method="post" enctype="multipart/form-data">
-                                                            <input type="file" name="file" required>
-                                                            <input type="hidden" name="IDTransaksi" value="<?php echo $d['IDTransaksi']; ?>">
-                                                            <button type="submit" name="simpan" class="btn btn-success">Kirim Bukti</button>
-                                                        </form>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                                                    <!-- Formulir upload bukti transaksi -->
+                                                    <form action="transaksi/uploadbukti.php" method="post" enctype="multipart/form-data">
+                                                        <input type="file" name="file" required>
+                                                        <input type="hidden" name="IDTransaksi" value="<?php echo $d['IDTransaksi']; ?>">
+                                                        <button type="submit" name="simpan" class="btn btn-success">Kirim Bukti</button>
+                                                    </form>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                <?php
+                                    <?php
                                 }
-                                ?>
+                                    ?>
                             </tbody>
                         </table>
                     </div>
