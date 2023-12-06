@@ -32,14 +32,11 @@ if ($oldImage) {
 $terupload = move_uploaded_file($namaSementara, $dirUpload.$namaFileBaru);
 
 if ($terupload) {
-    echo "Upload berhasil!<br/>";
-    echo "Link: <a href='".$dirUpload.$namaFileBaru."'>".$namaFileBaru."</a>";
 
-    // Menambahkan query SQL untuk memperbarui database
     $query = mysqli_query($koneksi, "UPDATE transaksi SET BuktiTransaksi='$namaFileBaru' WHERE IDTransaksi='$idtransaksi'");
 
     if ($query) {
-        echo "Database berhasil diperbarui!";
+        header("location: ../../index.php?submenu=Transaksi");
     } else {
         echo "Gagal memperbarui database!";
     }
