@@ -31,6 +31,7 @@
                                     j.Asal,
                                     j.Tujuan,
                                     t.BuktiTransaksi,
+                                    j.TanggalBerangkat,
                                     t.IDTransaksi AS 'ID Transaksi',
                                     p.NamaPelanggan AS 'Nama Pelanggan',
                                     CONCAT(SUBSTRING(a.NamaArmada, 1, 3), SUBSTRING(j.Asal, 1, 3), SUBSTRING(j.Tujuan, 1, 3)) AS 'Perjalanan',
@@ -57,7 +58,7 @@
                                 ?>
                                     <tr>
                                         <td><?php echo $no++; ?></td>
-                                        <td><a href="index.php?submenu=Jadwal&idjadwal=<?php echo $d['IDJadwal']; ?>" title="<?php echo $d['NamaArmada'] . ' - ' . $d['Asal'] . ' - ' . $d['Tujuan']; ?>"><?php echo $d['Perjalanan']; ?></a></td>
+                                        <td><a href="index.php?submenu=Jadwal&idjadwal=<?php echo $d['IDJadwal']; ?>&cariid=#" title="<?php echo $d['NamaArmada'] . ' - ' . $d['Asal'] . ' - ' . $d['Tujuan']; ?>"><?php echo $d['Perjalanan']; ?></a></td>
                                         <td>
                                             <?php
                                             $timestamp = strtotime($d['Tanggal Transaksi']);
@@ -96,12 +97,27 @@
                                             <?php else : ?>
                                                 <!-- Jika bukti transaksi sudah ada -->
                                                 <div class="btn-group">
-                                                    <button class="btn btn-primary" data-toggle="modal" data-target="#imageModal" onclick="showImage()">
-                                                        <span class="fa fa-folder-open"></span> Lihat Bukti
-                                                    </button>
-                                                    <button class="btn btn-success" data-toggle="modal" data-target="#buktiTRX" onclick="showBukti()" style="margin-left: 10px;">
-                                                        <span class="fa fa-file-image-o"></span> Kirim Bukti
-                                                    </button>
+                                                    <?php if ($d['Status'] == 'Dibatalkan') { ?>
+                                                        <button class="btn btn-danger disabled">
+                                                            <span class="fa fa-ban"></span> Pesanan Ini Telah Dibatalkan
+                                                        </button>
+                                                    <?php
+                                                    } elseif ($d['Status'] == 'Dibayar') { ?>
+                                                        <button class="btn btn-success disabled">
+                                                            <span class="fa fa-ban"></span> Pesanan Ini Sudah Dibayar
+                                                        </button>
+                                                    <?php
+                                                    } else { ?>
+                                                        <button class="btn btn-primary" data-toggle="modal" data-target="#imageModal" onclick="showImage()">
+                                                            <span class="fa fa-folder-open"></span> Lihat Bukti
+                                                        </button>
+                                                        <button class="btn btn-success" data-toggle="modal" data-target="#buktiTRX" onclick="showBukti()" style="margin-left: 10px;">
+                                                            <span class="fa fa-file-image-o"></span> Kirim Bukti
+                                                        </button>
+                                                        <button class="btn btn-danger" data-toggle="modal" data-target="#batalTRX" onclick="showBatal()" style="margin-left: 10px;">
+                                                            <span class="fa fa-ban"></span> Batalkan Pesanan
+                                                        </button>
+                                                    <?php } ?>
                                                 </div>
                                             <?php endif; ?>
                                         </td>
@@ -150,9 +166,42 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    <?php
+                                    </div>
+                                    <!-- Modal for each row Batalkan-->
+                                    <div class="modal fade" id="batalTRX" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="imageModalLabel">Bukti Transaksi</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <h4>Apakah anda ingin membatalkan pesanan?</h4>
+                                                    <!-- Formulir upload bukti transaksi -->
+                                                    <form action="transaksi/batalkan.php" method="post">
+                                                        <input type="hidden" name="IDTransaksi" value="<?php echo $d['IDTransaksi']; ?>">
+                                                        <b>Perjalanan : </b><?php echo $d['NamaArmada'] . ' - ' . $d['Asal'] . ' - ' . $d['Tujuan']; ?><br>
+                                                        <b>Tanggal Keberangkatan : </b><?php echo $d['TanggalBerangkat']; ?><br>
+                                                        <b>Jumlah Penumpang : </b><?php echo $d['Jumlah Penumpang']; ?><br>
+                                                        <b>Harga : </b> <?php if ($diskon == 0) {
+                                                                            echo 'Rp ' . number_format($totalHarga, 0, ',', '.');
+                                                                        } elseif ($diskon != 0) {
+                                                                            echo '<del>Rp ' . number_format($harga * $jumlahPenumpang, 0, ',', '.') . '</del><br>Rp ' . number_format($totalHarga, 0, ',', '.');
+                                                                        } ?>
+                                                        <button type="submit" name="simpan" class="btn btn-success">Batalkan</button>
+                                                    </form>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <?php
                                 }
-                                    ?>
+                                ?>
                             </tbody>
                         </table>
                     </div>

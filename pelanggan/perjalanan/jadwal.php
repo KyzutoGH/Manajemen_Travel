@@ -113,22 +113,26 @@
                                                 $kotatujuan = $_GET['kotatujuan'];
                                                 $tanggalberangkat = $_GET['tanggalberangkat'];
                                                 $hargasort = $_GET['hargasort'];
+                                            } elseif (isset($_GET['cariid'])) {
+                                                $idjadwal = $_GET['idjadwal'];
                                             }
 
                                             if (isset($_GET['cari'])) {
-                                                $kueri = "SELECT armada.NamaArmada, armada.Jenis, jadwal.IDJadwal, jadwal.Asal, jadwal.Tujuan, jadwal.Kelas, jadwal.TanggalBerangkat, jadwal.TanggalTiba, jadwal.JamBerangkat, jadwal.JamTiba, jadwal.Harga, jadwal.Diskon FROM armada JOIN jadwal ON armada.IDArmada = Jadwal.IDArmada WHERE NamaArmada LIKE '%".$keyword."%'";
-                                                if($kotaberangkat != ''){
+                                                $kueri = "SELECT armada.NamaArmada, armada.Jenis, jadwal.IDJadwal, jadwal.Asal, jadwal.Tujuan, jadwal.Kelas, jadwal.TanggalBerangkat, jadwal.TanggalTiba, jadwal.JamBerangkat, jadwal.JamTiba, jadwal.Harga, jadwal.Diskon FROM armada JOIN jadwal ON armada.IDArmada = Jadwal.IDArmada WHERE NamaArmada LIKE '%" . $keyword . "%'";
+                                                if ($kotaberangkat != '') {
                                                     $kueri .= "AND Asal='$kotaberangkat'";
-                                                } elseif($jeniskendaraan !='') {
+                                                } elseif ($jeniskendaraan != '') {
                                                     $kueri .= "AND Jenis='$jeniskendaraan'";
-                                                } elseif($kotatujuan !=''){
+                                                } elseif ($kotatujuan != '') {
                                                     $kueri .= "AND Tujuan='$kotatujuan'";
-                                                } elseif($tanggalberangkat != ''){
+                                                } elseif ($tanggalberangkat != '') {
                                                     $kueri .= "AND TanggalBerangkat='$tanggalberangkat'";
-                                                } elseif($hargasort != ''){
-                                                    $kueri .= "ORDER BY ".$hargasort;
+                                                } elseif ($hargasort != '') {
+                                                    $kueri .= "ORDER BY " . $hargasort;
                                                 }
                                                 $data = mysqli_query($koneksi, $kueri);
+                                            } elseif (isset($_GET["cariid"])) {
+                                                $data = mysqli_query($koneksi, "SELECT armada.NamaArmada, armada.Jenis, jadwal.IDJadwal, jadwal.Asal, jadwal.Tujuan, jadwal.Kelas, jadwal.TanggalBerangkat, jadwal.TanggalTiba, jadwal.JamBerangkat, jadwal.JamTiba, jadwal.Harga, jadwal.Diskon FROM armada JOIN jadwal ON armada.IDArmada = Jadwal.IDArmada WHERE IDJadwal='$idjadwal';");
                                             } else {
                                                 $data = mysqli_query($koneksi, "SELECT armada.NamaArmada, armada.Jenis, jadwal.IDJadwal, jadwal.Asal, jadwal.Tujuan, jadwal.Kelas, jadwal.TanggalBerangkat, jadwal.TanggalTiba, jadwal.JamBerangkat, jadwal.JamTiba, jadwal.Harga, jadwal.Diskon FROM armada JOIN jadwal ON armada.IDArmada = Jadwal.IDArmada;");
                                             }
@@ -140,8 +144,8 @@
                                                         ?><i class="fa fa-bus"></i><?php
                                                                                 } elseif ($d["Jenis"] == "Pesawat") {
                                                                                     ?><i class="fa fa-plane"></i><?php
-                                                                                                                    } elseif ($d["Jenis"] == "Kapal") {
-                                                                                                                        ?><i class="fa fa-ship"></i><?php
+                                                                                                                } elseif ($d["Jenis"] == "Kapal") {
+                                                                                                                    ?><i class="fa fa-ship"></i><?php
                                                                                                                                                 } ?></td>
                                                     <td><?php echo $d['Asal']; ?></td>
                                                     <td><?php echo $d['Tujuan']; ?></td>
@@ -209,7 +213,7 @@
                                                         ?>
                                                     </td>
                                                     <td>
-                                                        <a class="col-xs-offset-1 btn btn-success fa fa-money" href="index.php?submenu=Pesan&IDPelanggan=<?php echo $_SESSION['idpelanggan'];?>&IDJadwal=<?php echo $d['IDJadwal']; ?>"></a>
+                                                        <a class="col-xs-offset-1 btn btn-success fa fa-money" href="index.php?submenu=Pesan&IDPelanggan=<?php echo $_SESSION['idpelanggan']; ?>&IDJadwal=<?php echo $d['IDJadwal']; ?>"></a>
                                                     </td>
                                                 </tr>
                                             <?php
