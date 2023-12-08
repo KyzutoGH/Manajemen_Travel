@@ -86,40 +86,40 @@
                                             }
                                             ?>
                                         </td>
-                                        <td>
-                                            <span class="<?php echo ($d['Status'] == 'Belum Dibayar') ? 'label label-danger' : (($d['Status'] == 'Dibayar') ? 'label label-warning' : (($d['Status'] == 'Dibatalkan') ? 'label label-success' : '')); ?>">
-                                                <?php echo $d['Status']; ?></span>
+                                        <td><button style="margin-left: 10px;" class="<?php echo ($d['Status'] == 'Belum Dibayar') ? 'btn btn-danger' : (($d['Status'] == 'Dibayar') ? 'btn btn-warning' : (($d['Status'] == 'Dibatalkan') ? 'btn btn-success' : '')); ?> disabled">
+                                                <span class="<?php echo ($d['Status'] == 'Belum Dibayar') ? 'fa fa-money' : (($d['Status'] == 'Dibayar') ? 'fa fa-check-circle' : (($d['Status'] == 'Dibatalkan') ? 'fa fa-ban' : '')); ?>">
+                                                </span> <?php echo $d['Status']; ?>
+                                            </button>
                                         </td>
                                         <td>
-                                            <?php if (empty($d['BuktiTransaksi'])) : ?>
-                                                <!-- Tombol "Kirim Bukti" -->
-                                                <button class="btn btn-primary" data-toggle="modal" data-target="#imageModal_<?php echo isset($d['IDTransaksi']) ? $d['IDTransaksi'] : ''; ?>" onclick="showImage()"><span class="fa-file-image-o"></span></button>
-                                            <?php else : ?>
-                                                <!-- Jika bukti transaksi sudah ada -->
-                                                <div class="btn-group">
-                                                    <?php if ($d['Status'] == 'Dibatalkan') { ?>
-                                                        <button class="btn btn-danger disabled">
-                                                            <span class="fa fa-ban"></span> Pesanan Ini Telah Dibatalkan
-                                                        </button>
-                                                    <?php
-                                                    } elseif ($d['Status'] == 'Dibayar') { ?>
-                                                        <button class="btn btn-success disabled">
-                                                            <span class="fa fa-ban"></span> Pesanan Ini Sudah Dibayar
-                                                        </button>
-                                                    <?php
-                                                    } else { ?>
-                                                        <button class="btn btn-primary" data-toggle="modal" data-target="#imageModal" onclick="showImage()">
-                                                            <span class="fa fa-folder-open"></span> Lihat Bukti
-                                                        </button>
-                                                        <button class="btn btn-success" data-toggle="modal" data-target="#buktiTRX" onclick="showBukti()" style="margin-left: 10px;">
-                                                            <span class="fa fa-file-image-o"></span> Kirim Bukti
-                                                        </button>
-                                                        <button class="btn btn-danger" data-toggle="modal" data-target="#batalTRX" onclick="showBatal()" style="margin-left: 10px;">
-                                                            <span class="fa fa-ban"></span> Batalkan Pesanan
-                                                        </button>
-                                                    <?php } ?>
-                                                </div>
-                                            <?php endif; ?>
+                                            <!-- Jika bukti transaksi sudah ada -->
+                                            <div class="btn-group">
+                                                <?php if ($d['Status'] == 'Dibatalkan') { ?>
+                                                    <button class="btn btn-danger disabled">
+                                                        <span class="fa fa-ban"></span> Pesanan Ini Telah Dibatalkan
+                                                    </button>
+                                                <?php
+                                                } elseif ($d['Status'] == 'Dibayar') { ?>
+                                                    <button class="btn btn-success disabled">
+                                                        <span class="fa fa-ban"></span> Pesanan Ini Sudah Dibayar
+                                                    </button>
+                                                <?php
+                                                } elseif ($d['Status'] == 'Belum Dibayar') {
+                                                ?>
+                                                    <button class="btn btn-success" data-toggle="modal" data-target="#buktiTRX" style="margin-left: 10px;" title="Kirim Bukti">
+                                                        <span class="fa fa-file-picture-o"></span> 
+                                                    </button>
+                                                    <button class="btn btn-danger" data-toggle="modal" data-target="#batalTRX" style="margin-left: 10px;" title="Batalkan Pesanan">
+                                                        <span class="fa fa-ban"></span>
+                                                    </button>
+                                                    <button class="btn btn-primary" data-toggle="modal" data-target="#imageModal" style="margin-left: 10px;" title="Lihat Bukti">
+                                                        <span class="fa fa-folder-open"></span>
+                                                    </button>
+                                                <?php
+                                                } else { ?>
+                                                    ERROR
+                                                <?php } ?>
+                                            </div>
                                         </td>
                                     </tr>
                                     <!-- Modal for each row Lihat Bukti -->

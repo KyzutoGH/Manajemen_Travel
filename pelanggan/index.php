@@ -54,6 +54,8 @@ include '../bagian/kepala.php';
                 include 'akun/akun.php';
             } elseif ($submenu == "Pesan") {
                 include 'pemesanan/setpnp.php';
+            } elseif ($submenu == "Insert") {
+                include 'pemesanan/insert.php';
             } elseif ($submenu == "Bayar") {
                 include 'pemesanan/bayar.php';
             } else {
