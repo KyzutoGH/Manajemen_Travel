@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Apply discount logic
             if ($diskon > 0) {
                 // If there is a discount, subtract it from the price
-                $hargabaru = $harga - $diskon;
+                $hargabaru = $harga - ($harga * $diskon / 100);
             } else {
                 // If there is no discount, use the original price
                 $hargabaru = $harga;
@@ -40,15 +40,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Handle the query error
         echo "Error: " . mysqli_error($koneksi);
     }
-    
+
     $namapenumpang = $_POST["namapelanggan"];
     $jumlah_penumpang = $_POST["jumlah_penumpang"];
     $totalHargabayar = $hargabaru * $jumlah_penumpang;
-    $idtrax = date('Ymd') . $idjadwal;
-    
+    $idtrax = rand(0, 10000);
+
     // Additional data you may need
     $idPelanggan = isset($_POST["idpelanggan"]) ? $_POST["idpelanggan"] : null; // Ensure it's set
-    
+
     // Insert data into the Transaksi table
     $sqlInsertTransaksi = "INSERT INTO Transaksi (IDTransaksi, IDPelanggan, IDJadwal, TanggalTransaksi, TotalHarga, StatusTransaksi) VALUES ('$idtrax','$idPelanggan', '$idjadwal', NOW(), '$totalHargabayar', 'Belum Dibayar')";
 
@@ -59,23 +59,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         for ($i = 1; $i <= $jumlah_penumpang; $i++) {
             $idpenumpang_field = "idpenumpang_" . $i;
             $idPenumpang = is_array($_POST[$idpenumpang_field]) ? implode(',', $_POST[$idpenumpang_field]) : $_POST[$idpenumpang_field];
-            $detailtrx = uniqid();
-            $detailinfx= uniqid($detailtrx);
+            $detailtrx = rand(0, 40000);
 
-            $sqlInsertDetailTransaksi = "INSERT INTO DetailTransaksi (IDDetailTransaksi, IDTransaksi, IDPenumpang, HargaTiket) VALUES ('$detailinfx', '$idtrax', '$idPenumpang', '$hargabaru')";
+            $sqlInsertDetailTransaksi = "INSERT INTO DetailTransaksi (IDDetailTransaksi, IDTransaksi, IDPenumpang, HargaTiket) VALUES ('$detailtrx', '$idtrax', '$idPenumpang', '$hargabaru')";
 
             mysqli_query($koneksi, $sqlInsertDetailTransaksi);
         }
 
-        // Your additional processing logic...
-
-        // Redirect or show success message
-        echo "AWOKAWOK UDAH BENAR";
-        // header("Location: success_page.php"); // Change to your success page
+        header("Location: ../index.php?submenu=Bayar&IDTransaksi=$idtrax");
         exit();
     } else {
         // Handle the case where the Transaksi insertion fails
         echo "Error: " . mysqli_error($koneksi);
     }
 }
-?>

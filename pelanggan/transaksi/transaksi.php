@@ -73,21 +73,13 @@
                                         <td>
                                             <?php
                                             $harga = $d['Harga'];
-                                            $diskon = $d['Diskon'];
                                             $jumlahPenumpang = $d['Jumlah Penumpang'];
 
-                                            $hargaSetelahDiskon = $harga - ($harga * ($diskon / 100));
-                                            $totalHarga = ($jumlahPenumpang == 0) ? $hargaSetelahDiskon : $hargaSetelahDiskon * $jumlahPenumpang;
-
-                                            if ($diskon == 0) {
-                                                echo 'Rp ' . number_format($totalHarga, 0, ',', '.');
-                                            } elseif ($diskon != 0) {
-                                                echo '<del>Rp ' . number_format($harga * $jumlahPenumpang, 0, ',', '.') . '</del><br>Rp ' . number_format($totalHarga, 0, ',', '.');
-                                            }
+                                            echo 'Rp ' . number_format($harga, 0, ',', '.');
                                             ?>
                                         </td>
-                                        <td><button style="margin-left: 10px;" class="<?php echo ($d['Status'] == 'Belum Dibayar') ? 'btn btn-danger' : (($d['Status'] == 'Dibayar') ? 'btn btn-warning' : (($d['Status'] == 'Dibatalkan') ? 'btn btn-success' : '')); ?> disabled">
-                                                <span class="<?php echo ($d['Status'] == 'Belum Dibayar') ? 'fa fa-money' : (($d['Status'] == 'Dibayar') ? 'fa fa-check-circle' : (($d['Status'] == 'Dibatalkan') ? 'fa fa-ban' : '')); ?>">
+                                        <td><button style="margin-left: 10px;" class="<?php echo ($d['Status'] == 'Belum Dibayar') ? 'btn btn-warning' : (($d['Status'] == 'Dibayar') ? 'btn btn-success' : (($d['Status'] == 'Dibatalkan') ? 'btn btn-black' : 'btn btn-danger')); ?> disabled">
+                                                <span class="<?php echo ($d['Status'] == 'Belum Dibayar') ? 'fa fa-money' : (($d['Status'] == 'Dibayar') ? 'fa fa-check-circle' : (($d['Status'] == 'Dibatalkan') ? 'fa fa-ban' : 'fa fa-picture-o')); ?>">
                                                 </span> <?php echo $d['Status']; ?>
                                             </button>
                                         </td>
@@ -104,26 +96,31 @@
                                                         <span class="fa fa-ban"></span> Pesanan Ini Sudah Dibayar
                                                     </button>
                                                 <?php
-                                                } elseif ($d['Status'] == 'Belum Dibayar') {
+                                                } elseif ($d['Status'] == 'Belum Kirim Bukti') {
                                                 ?>
-                                                    <button class="btn btn-success" data-toggle="modal" data-target="#buktiTRX" style="margin-left: 10px;" title="Kirim Bukti">
-                                                        <span class="fa fa-file-picture-o"></span> 
+                                                    <button class="btn btn-success" data-toggle="modal" data-target="#buktiTRX__<?php echo $d['IDTransaksi']; ?>" style="margin-left: 10px;" title="Kirim Bukti">
+                                                        <span class="fa fa-file-picture-o"></span>
                                                     </button>
-                                                    <button class="btn btn-danger" data-toggle="modal" data-target="#batalTRX" style="margin-left: 10px;" title="Batalkan Pesanan">
+                                                    <button class="btn btn-danger" data-toggle="modal" data-target="#batalTRX__<?php echo $d['IDTransaksi']; ?>" style="margin-left: 10px;" title="Batalkan Pesanan">
                                                         <span class="fa fa-ban"></span>
                                                     </button>
-                                                    <button class="btn btn-primary" data-toggle="modal" data-target="#imageModal" style="margin-left: 10px;" title="Lihat Bukti">
+                                                    <button class="btn btn-primary" data-toggle="modal" data-target="#imageModal__<?php echo $d['IDTransaksi']; ?>" style="margin-left: 10px;" title="Lihat Bukti">
                                                         <span class="fa fa-folder-open"></span>
                                                     </button>
                                                 <?php
                                                 } else { ?>
-                                                    ERROR
+                                                    <a class="btn btn-success" href="index.php?submenu=Bayar&IDTransaksi=<?php echo $d['IDTransaksi']; ?>" style="margin-left: 10px;" title="Bayar">
+                                                        <span class="fa fa-money"></span>
+                                                    </a>
+                                                    <button class="btn btn-danger" data-toggle="modal" data-target="#batalTRX__<?php echo $d['IDTransaksi']; ?>" style="margin-left: 10px;" title="Batalkan Pesanan">
+                                                        <span class="fa fa-ban"></span>
+                                                    </button>
                                                 <?php } ?>
                                             </div>
                                         </td>
                                     </tr>
                                     <!-- Modal for each row Lihat Bukti -->
-                                    <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel" aria-hidden="true">
+                                    <div class="modal fade" id="imageModal__<?php echo $d['IDTransaksi']; ?>" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel" aria-hidden="true">
                                         <div class="modal-dialog" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-header">
@@ -144,7 +141,7 @@
                                         </div>
                                     </div>
                                     <!-- Modal for each row Kirim Bukti-->
-                                    <div class="modal fade" id="buktiTRX" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel" aria-hidden="true">
+                                    <div class="modal fade" id="buktiTRX__<?php echo $d['IDTransaksi']; ?>" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel" aria-hidden="true">
                                         <div class="modal-dialog" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-header">
@@ -168,7 +165,7 @@
                                         </div>
                                     </div>
                                     <!-- Modal for each row Batalkan-->
-                                    <div class="modal fade" id="batalTRX" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel" aria-hidden="true">
+                                    <div class="modal fade" id="batalTRX__<?php echo $d['IDTransaksi']; ?>" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel" aria-hidden="true">
                                         <div class="modal-dialog" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-header">
@@ -185,11 +182,7 @@
                                                         <b>Perjalanan : </b><?php echo $d['NamaArmada'] . ' - ' . $d['Asal'] . ' - ' . $d['Tujuan']; ?><br>
                                                         <b>Tanggal Keberangkatan : </b><?php echo $d['TanggalBerangkat']; ?><br>
                                                         <b>Jumlah Penumpang : </b><?php echo $d['Jumlah Penumpang']; ?><br>
-                                                        <b>Harga : </b> <?php if ($diskon == 0) {
-                                                                            echo 'Rp ' . number_format($totalHarga, 0, ',', '.');
-                                                                        } elseif ($diskon != 0) {
-                                                                            echo '<del>Rp ' . number_format($harga * $jumlahPenumpang, 0, ',', '.') . '</del><br>Rp ' . number_format($totalHarga, 0, ',', '.');
-                                                                        } ?>
+                                                        <b>Harga : </b> <?php echo 'Rp ' . number_format($harga, 0, ',', '.'); ?>
                                                         <button type="submit" name="simpan" class="btn btn-success">Batalkan</button>
                                                     </form>
                                                     <div class="modal-footer">

@@ -35,6 +35,8 @@ include '../bagian/saitel.php';
 				include 'Read/laporan.php';
 			} elseif ($submenu == "Detail") {
 				include 'Read/detail.php';
+			} elseif ($submenu == "New") {
+				include '../bagian/apayangbaru.php';
 			} else {
 				include '../TheHandler/tabel404.php';
 			}

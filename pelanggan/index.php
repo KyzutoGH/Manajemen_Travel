@@ -58,6 +58,8 @@ include '../bagian/kepala.php';
                 include 'pemesanan/insert.php';
             } elseif ($submenu == "Bayar") {
                 include 'pemesanan/bayar.php';
+            } elseif ($submenu == "New") {
+                include '../bagian/apayangbaru.php';
             } else {
                 include '../TheHandler/tabel404.php';
             }
