@@ -33,6 +33,7 @@
                                 $data = mysqli_query($koneksi, "SELECT j.IDJadwal,
                                 t.BuktiTransaksi,
                                 a.NamaArmada,
+                                t.IDTransaksi,
                                 j.Asal,
                                 j.Tujuan,
                                 t.IDTransaksi AS 'ID Transaksi',
@@ -106,9 +107,11 @@
                                             ?>
                                         </td>
                                         <td>
-                                            <button class="btn btn-primary" data-toggle="modal" data-target="#imageModal" onclick="showImage()">Tampilkan Bukti</button>
+                                            <button class="btn btn-primary" data-toggle="modal" data-target="#imageModal__<?php echo $d['IDTransaksi']; ?>">Tampilkan Bukti</button>
                                         </td>
-                                        <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel" aria-hidden="true">
+
+                                        <!-- Modal for each row Lihat Bukti -->
+                                        <div class="modal fade" id="imageModal__<?php echo $d['IDTransaksi']; ?>" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel" aria-hidden="true">
                                             <div class="modal-dialog" role="document">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
@@ -118,7 +121,9 @@
                                                         </button>
                                                     </div>
                                                     <div class="modal-body">
-                                                        <img id="modalImage" src="../dist/img/trxs/<?php echo $d['BuktiTransaksi'];?>.jpg" alt="Tidak Ada Bukti" style="max-width: 100%; height: auto;">
+                                                        <!-- Jika bukti transaksi sudah ada -->
+                                                        <img id="modalImage" src="../dist/img/trxs/<?php echo $d['BuktiTransaksi']; ?>" alt="Tidak Ada Bukti" style="max-width: 100%; height: auto;">
+                                                        <p>Bukti transaksi sudah terunggah.</p>
                                                     </div>
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
@@ -138,7 +143,7 @@
                                                 <span class="label label-success">Transaksi Sudah Dibayar</span>
                                             <?php } else { ?>
                                                 <a class="col-xs-offset-1" href="Update/transaksi/bayar.php?idtrx=<?php echo $d['ID Transaksi']; ?>"><span class="label label-success">Konfirmasi</span></a>
-                                                <a class="col-xs-offset-1" href="Update/transaksi/batal.php?idtrx=<?php echo $d['ID Transaksi']; ?>"><span class="label label-danger">Batalkan</span></a>
+                                                <a class="col-xs-offset-1" href="Update/transaksi/batal.php?idtrx=<?php echo $d['ID Transaksi']; ?>"><span class="label label-danger">Tidak Valid</span></a>
                                             <?php } ?>
                                         </td>
                                     </tr>

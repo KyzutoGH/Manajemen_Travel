@@ -78,7 +78,7 @@
                                             echo 'Rp ' . number_format($harga, 0, ',', '.');
                                             ?>
                                         </td>
-                                        <td><button style="margin-left: 10px;" class="<?php echo ($d['Status'] == 'Belum Dibayar') ? 'btn btn-warning' : (($d['Status'] == 'Dibayar') ? 'btn btn-success' : (($d['Status'] == 'Dibatalkan') ? 'btn btn-black' : 'btn btn-danger')); ?> disabled">
+                                        <td><button style="margin-left: 10px;" class="<?php echo ($d['Status'] == 'Belum Dibayar') ? 'btn btn-warning' : (($d['Status'] == 'Dibayar') ? 'btn btn-success' : (($d['Status'] == 'Dibatalkan') ? 'btn bg-black' : 'btn btn-danger')); ?> disabled">
                                                 <span class="<?php echo ($d['Status'] == 'Belum Dibayar') ? 'fa fa-money' : (($d['Status'] == 'Dibayar') ? 'fa fa-check-circle' : (($d['Status'] == 'Dibatalkan') ? 'fa fa-ban' : 'fa fa-picture-o')); ?>">
                                                 </span> <?php echo $d['Status']; ?>
                                             </button>
@@ -92,11 +92,11 @@
                                                     </button>
                                                 <?php
                                                 } elseif ($d['Status'] == 'Dibayar') { ?>
-                                                    <button class="btn btn-success disabled">
-                                                        <span class="fa fa-ban"></span> Pesanan Ini Sudah Dibayar
-                                                    </button>
+                                                    <a href="index.php?submenu=Tiket&IDTransaksi=<?php echo $d['IDTransaksi'];?>" class="btn btn-success"style="margin-left: 10px;" title="Lihat Tiket">
+                                                        <span class="fa fa-ticket"></span>
+                                                    </a>
                                                 <?php
-                                                } elseif ($d['Status'] == 'Belum Kirim Bukti') {
+                                                } elseif ($d['Status'] == 'Belum Kirim Bukti' || $d['Status'] == 'Sudah Kirim Bukti') {
                                                 ?>
                                                     <button class="btn btn-success" data-toggle="modal" data-target="#buktiTRX__<?php echo $d['IDTransaksi']; ?>" style="margin-left: 10px;" title="Kirim Bukti">
                                                         <span class="fa fa-file-picture-o"></span>

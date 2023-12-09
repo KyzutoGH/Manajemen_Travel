@@ -60,6 +60,8 @@ include '../bagian/kepala.php';
                 include 'pemesanan/bayar.php';
             } elseif ($submenu == "New") {
                 include '../bagian/apayangbaru.php';
+            } elseif ($submenu == "Tiket") {
+                include 'pemesanan/tiket.php';
             } else {
                 include '../TheHandler/tabel404.php';
             }
