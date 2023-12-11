@@ -8,7 +8,7 @@
     </section>
     <section class="content">
         <div class="box">
-        <button onclick="window.print()">Cetak Tiket</button>
+            <button onclick="window.print()" class="btn btn-success pull-left">Cetak Tiket</button><br><br>
             <?php
             $idtrxk = $_GET['IDTransaksi'];
             $data = mysqli_query($koneksi, "SELECT j.IDJadwal,
@@ -53,22 +53,33 @@
                             while ($passengerRow = mysqli_fetch_assoc($passengerData)) {
             ?>
                                 <div class="callout callout-warning">
-                                    <table border="1" style="width: 100%; font-family: Arial, Helvetica, sans-serif; text-align: center;">
+                                    <table style="width: 100%; font-family: Arial, Helvetica, sans-serif; text-align: center;">
                                         <tr>
-                                            <th>NAMA/NAME</th>
-                                            <th>KELAS/CLASS</th>
-                                            <th>TANGGAL BERANGKAT</th>
-                                            <th rowspan="4">LOGO ARMADA</th>
+                                            <th style="text-align: center;">NAMA/NAME</th>
+                                            <th style="text-align: center;">KELAS/CLASS</th>
+                                            <th style="text-align: center;">TANGGAL BERANGKAT</th>
                                         </tr>
                                         <tr>
                                             <td><?php echo $passengerRow['NamaPenumpang']; ?></td>
                                             <td><?php echo $row['Kelas']; ?></td>
-                                            <td><?php echo $row['TanggalBerangkat']; ?></td>
+                                            <td><?php
+                                                $tanggalBerangkat = $row['Tanggal Transaksi'];
+                                                $timestamp = strtotime($tanggalBerangkat);
+
+                                                $bulan = array(
+                                                    1 => "JANUARI", 2 => "FEBRUARI", 3 => "MARET", 4 => "APRIL", 5 => "MEI", 6 => "JUNI",
+                                                    7 => "JULI", 8 => "AGUSTUS", 9 => "SEPTEMBER", 10 => "OKTOBER", 11 => "NOVEMBER", 12 => "DESEMBER"
+                                                );                                                
+
+                                                $tanggalFormatted = date('d', $timestamp) . ' ' . $bulan[date('n', $timestamp)] . ' ' . date('Y', $timestamp);
+
+                                                echo $tanggalFormatted;
+                                                ?></td>
                                         </tr>
                                         <tr>
-                                            <th>ARMADA</th>
-                                            <th>ASAL/TUJUAN</th>
-                                            <th rowspan="2">E-SIGNATURE AGEN</th>
+                                            <th style="text-align: center;">ARMADA</th>
+                                            <th style="text-align: center;">ASAL/TUJUAN</th>
+                                            <th style="text-align: center;" rowspan="2"><img src="../dist/img/Esign.png" style="width: 50%; height: 50%;"></th>
                                         </tr>
                                         <tr>
                                             <td><?php echo $row['NamaArmada']; ?></td>

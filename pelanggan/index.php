@@ -62,6 +62,18 @@ include '../bagian/kepala.php';
                 include '../bagian/apayangbaru.php';
             } elseif ($submenu == "Tiket") {
                 include 'pemesanan/tiket.php';
+            } elseif ($submenu == "EAkun") {
+                include 'akun/editakun.php';
+            } elseif ($submenu == "EPenumpang") {
+                include 'akun/editpnp.php';
+            } elseif ($submenu == "EAkunApply") {
+                include 'akun/applyakun.php';
+            } elseif ($submenu == "EPenumpangApply") {
+                include 'akun/applypenumpang.php';
+            } elseif ($submenu == "HPenumpangApply") {
+                include 'akun/hapuspnp.php';
+            } elseif ($submenu == "TPenumpangApply") {
+                include 'akun/addpnp.php';
             } else {
                 include '../TheHandler/tabel404.php';
             }

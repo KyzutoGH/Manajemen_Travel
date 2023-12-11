@@ -19,6 +19,8 @@
                             <ul>
                                 <li>Cetak Tiket Mandiri</li>
                                 <li>Detail Akun Lengkap</li>
+                                <li>Manajemen Penumpang</li>
+                                <li>Aplikasi Ini Belum Ramah Untuk Mobile</li>
                             </ul>
                             <li>
                                 <h3>Fitur Yang Akan Datang</h3>
@@ -32,8 +34,8 @@
                             </li>
                             <ul>
                                 <li>AdminLTE 2 as Designer</li>
-                                <li>Muhammad Ikhsan as Programmer and co-Analyst</li>
-                                <li>Aditya Akbar Rizky Karindra as Designer Logo and Analyst</li>
+                                <li>Muhammad Ikhsan as Programmer and Analyst</li>
+                                <li>Aditya Akbar Rizky Karindra as Designer and Analyst</li>
                                 <li>Jonathan Setya Widayat as Front End Developer and Analyst</li>
                                 <li>OpenAI as Support Developer</li>
                             </ul>

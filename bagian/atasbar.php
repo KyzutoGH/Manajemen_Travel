@@ -1,6 +1,6 @@
 <header class="main-header">
 	<a href="#" class="logo" style="background-color: #A5D7E8 ;">
-		<span class="logo-lg"><img src="../dist/img/logovertikal.png" style="width: 190px; height: 45px;"></span>
+		<span class="logo-lg"><img src="../dist/img/logovertikal.png" style="width: 73%;"></span>
 		<span class="logo-mini"><img src="../dist/img/favikon.png" style="width: 32px; height: 32px;"></span>
 	</a>
 	<nav class="navbar navbar-static-top" style="background-color: #576CBC;">
@@ -14,14 +14,22 @@
 			<ul class="nav navbar-nav">
 				<li class="dropdown user user-menu">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-						<img src="../dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+							<?php if ($_SESSION['role'] == 'pelanggan') { ?>
+								<img src="../dist/img/e17747c78dd89a1d9522c5da154128b2.png" class="user-image" alt="User Image">
+							<?php } else { ?>
+								<img src="../dist/img/e17747c78dd89a1d9522c5da154128b2 879y98yh.png" class="user-image" alt="User Image">
+							<?php } ?>
 						<span class="hidden-xs"><?php echo ucwords($_SESSION['user']); ?></span>
 					</a>
 					<ul class="dropdown-menu">
 						<li class="user-header">
-							<img src="../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+							<?php if ($_SESSION['role'] == 'pelanggan') { ?>
+								<img src="../dist/img/e17747c78dd89a1d9522c5da154128b2.png" class="img-circle" alt="User Image">
+							<?php } else { ?>
+								<img src="../dist/img/e17747c78dd89a1d9522c5da154128b2 879y98yh.png" class="img-circle" alt="User Image">
+							<?php } ?>
 							<p><?php echo $_SESSION['user']; ?></p>
-							<p><small><?php echo $_SESSION['role'];?></small></p>
+							<p><small><?php echo $_SESSION['role']; ?></small></p>
 						</li>
 						<li class="user-footer">
 							<?php if ($_SESSION['role'] == 'pelanggan') {

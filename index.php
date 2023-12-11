@@ -5,13 +5,12 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>NewBiz Bootstrap Template - Index</title>
+  <title>Agen Travel Rahayu - Beranda</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="dist/img/favikon.png" rel="icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
@@ -51,26 +50,8 @@
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#services">Services</a></li>
           <li><a class="nav-link scrollto " href="#transport">transport</a></li>
           <li><a class="nav-link scrollto" href="#team">Team</a></li>
-          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-            </ul>
-          </li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -170,69 +151,6 @@
       </div>
     </section><!-- End About Section -->
 
-    <!-- ======= Services Section ======= -->
-    <section id="services" class="section-bg">
-      <div class="container" data-aos="fade-up">
-
-        <header class="section-header">
-          <h3>Services</h3>
-          <p>Siap melayani anda sepenuh hati.</p>
-        </header>
-
-        <div class="row justify-content-center">
-
-          <div class="col-md-6 col-lg-5" data-aos="zoom-in" data-aos-delay="100">
-            <div class="box">
-              <div class="icon"><i class="bi bi-briefcase" style="color: #ff689b;"></i></div>
-              <h4 class="title"><a href="">Bergabunglah dengan Tim Kami!</a></h4>
-              <p class="description">Dapatkan kesempatan untuk berkarier dalam industri perjalanan bersama kami, dan bantu ciptakan pengalaman liburan tak terlupakan untuk pelanggan.</p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-5" data-aos="zoom-in" data-aos-delay="200">
-            <div class="box">
-              <div class="icon"><i class="bi bi-card-checklist" style="color: #e9bf06;"></i></div>
-              <h4 class="title"><a href="">Pelayanan Berkualitas dan Tepat Waktu!</a></h4>
-              <p class="description">Kami berkomitmen untuk memberikan pelayanan yang tidak hanya berkualitas tinggi, tetapi juga tepat waktu.</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-5" data-aos="zoom-in" data-aos-delay="100">
-            <div class="box">
-              <div class="icon"><i class="bi bi-bar-chart" style="color: #3fcdc7;"></i></div>
-              <h4 class="title"><a href="">Analisis Mendalam untuk Perjalanan Terbaik!</a></h4>
-              <p class="description">Dukungan kami mencakup analisis yang mendalam untuk memastikan setiap perjalanan Anda memiliki perencanaan yang cermat dan sesuai dengan keinginan.</p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-5" data-aos="zoom-in" data-aos-delay="200">
-            <div class="box">
-              <div class="icon"><i class="bi bi-binoculars" style="color:#41cf2e;"></i></div>
-              <h4 class="title"><a href="">Eksplorasi Tanpa Batas dengan Insight yang Tajam!</a></h4>
-              <p class="description">Layanan kami memberikan wawasan mendalam melalui analisis detail, memungkinkan Anda untuk menjelajahi destinasi dengan persiapan yang matang.
-              </p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-5" data-aos="zoom-in" data-aos-delay="100">
-            <div class="box">
-              <div class="icon"><i class="bi bi-brightness-high" style="color: #d6ff22;"></i></div>
-              <h4 class="title"><a href="">Cuaca Optimal untuk Petualangan Tanpa Batas!</a></h4>
-              <p class="description">Kami secara cermat memantau perkembangan cuaca sehingga Anda dapat menikmati perjalanan tanpa khawatir akan kondisi cuaca yang tidak menguntungkan.</p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-5" data-aos="zoom-in" data-aos-delay="200">
-            <div class="box">
-              <div class="icon"><i class="bi bi-calendar4-week" style="color: #4680ff;"></i></div>
-              <h4 class="title"><a href="">Jadwal yang Terencana, Perjalanan yang Tertata!</a></h4>
-              <p class="description">Kami menyediakan jadwal perjalanan yang terstruktur dengan baik, memastikan setiap detik petualangan Anda terencana dengan sempurna.
-              </p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Services Section -->
-
     <!-- ======= Why Us Section ======= -->
     <section id="why-us">
       <div class="container" data-aos="fade-up">
@@ -279,25 +197,77 @@
         </div>
 
         <div class="row counters" data-aos="fade-up" data-aos-delay="100">
-
+          <?php include 'bagian/koneksi.php'; ?>
           <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Clients</p>
+            <?php
+            // Fetch the count of customers
+            $query = "SELECT COUNT(*) AS customerCount FROM pelanggan";
+            $result = mysqli_query($koneksi, $query);
+
+            if ($result) {
+              $row = mysqli_fetch_assoc($result);
+              $customerCount = $row['customerCount'];
+            } else {
+              // Handle query error
+              $customerCount = 0; // Set a default value or handle the error accordingly
+            }
+            ?>
+            <span data-purecounter-start="0" data-purecounter-end="<?php echo $customerCount; ?>" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Pelanggan</p>
           </div>
 
           <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="421" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Projects</p>
+            <?php
+            // Fetch the count of customers
+            $query = "SELECT COUNT(*) AS trxCount FROM transaksi";
+            $result = mysqli_query($koneksi, $query);
+
+            if ($result) {
+              $row = mysqli_fetch_assoc($result);
+              $trxCount = $row['trxCount'];
+            } else {
+              // Handle query error
+              $trxCount = 0; // Set a default value or handle the error accordingly
+            }
+            ?>
+            <span data-purecounter-start="0" data-purecounter-end="<?php echo $trxCount; ?>" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Perjalanan</p>
           </div>
 
           <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="1364" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Hours Of Support</p>
+            <?php
+            // Fetch the count of customers
+            $query = "SELECT COUNT(*) AS armCount FROM armada";
+            $result = mysqli_query($koneksi, $query);
+
+            if ($result) {
+              $row = mysqli_fetch_assoc($result);
+              $armCount = $row['armCount'];
+            } else {
+              // Handle query error
+              $armCount = 0; // Set a default value or handle the error accordingly
+            }
+            ?>
+            <span data-purecounter-start="0" data-purecounter-end="<?php echo $armCount; ?>" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Armada</p>
           </div>
 
           <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="42" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Hard Workers</p>
+            <?php
+            // Fetch the count of customers
+            $query = "SELECT COUNT(*) AS pnpCount FROM penumpang";
+            $result = mysqli_query($koneksi, $query);
+
+            if ($result) {
+              $row = mysqli_fetch_assoc($result);
+              $pnpCount = $row['pnpCount'];
+            } else {
+              // Handle query error
+              $pnpCount = 0; // Set a default value or handle the error accordingly
+            }
+            ?>
+            <span data-purecounter-start="0" data-purecounter-end="<?php echo $pnpCount; ?>" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Penumpang</p>
           </div>
 
         </div>
@@ -534,7 +504,8 @@
         </div>
 
       </div>
-    </section><!-- End Testimonials Section -->
+    </section>
+    <!-- End Testimonials Section -->
 
     <!-- ======= Team Section ======= -->
     <section id="team">
@@ -546,31 +517,31 @@
 
         <div class="row">
 
-          <div class="col-lg-3 col-md-6" data-aos="zoom-out" data-aos-delay="100">
+          <div class="col-lg-4 col-md-6" data-aos="zoom-out" data-aos-delay="100">
             <div class="member">
-              <img src="assets/img/team-1.jpg" class="img-fluid" alt="">
+              <img src="dist/img/iksanpropil.jpg" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
-                  <h4>Walter White</h4>
-                  <span>Chief Executive Officer</span>
+                  <h4>Muhammad Ikhsan</h4>
+                  <span>Back End Developer</span>
                   <div class="social">
-                    <a href=""><i class="bi bi-twitter"></i></a>
-                    <a href=""><i class="bi bi-facebook"></i></a>
-                    <a href=""><i class="bi bi-instagram"></i></a>
-                    <a href=""><i class="bi bi-linkedin"></i></a>
+                    <a href="https://twitter.com/KyzutoTX"><i class="bi bi-twitter"></i></a>
+                    <a href="https://www.facebook.com/KyzutoFX"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.instagram.com/kyzutogt/"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.youtube.com/channel/UCV4RRINmR-eEwx7OZFphQ2g"><i class="bi bi-youtube"></i></a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-6" data-aos="zoom-out" data-aos-delay="200">
+          <div class="col-lg-4 col-md-6" data-aos="zoom-out" data-aos-delay="200">
             <div class="member">
               <img src="assets/img/team-2.jpg" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
-                  <h4>Sarah Jhonson</h4>
-                  <span>Product Manager</span>
+                  <h4>Aditya Akbar Rizky Karindra</h4>
+                  <span>Web Designer</span>
                   <div class="social">
                     <a href=""><i class="bi bi-twitter"></i></a>
                     <a href=""><i class="bi bi-facebook"></i></a>
@@ -582,31 +553,13 @@
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-6" data-aos="zoom-out" data-aos-delay="300">
+          <div class="col-lg-4 col-md-6" data-aos="zoom-out" data-aos-delay="300">
             <div class="member">
-              <img src="assets/img/team-3.jpg" class="img-fluid" alt="">
+              <img src="dist/img/jonathanpropil.jpg" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
-                  <h4>William Anderson</h4>
-                  <span>CTO</span>
-                  <div class="social">
-                    <a href=""><i class="bi bi-twitter"></i></a>
-                    <a href=""><i class="bi bi-facebook"></i></a>
-                    <a href=""><i class="bi bi-instagram"></i></a>
-                    <a href=""><i class="bi bi-linkedin"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6" data-aos="zoom-out" data-aos-delay="400">
-            <div class="member">
-              <img src="assets/img/team-4.jpg" class="img-fluid" alt="">
-              <div class="member-info">
-                <div class="member-info-content">
-                  <h4>Amanda Jepson</h4>
-                  <span>Accountant</span>
+                  <h4>Jonathan Setya Widayat</h4>
+                  <span>Front End Developer</span>
                   <div class="social">
                     <a href=""><i class="bi bi-twitter"></i></a>
                     <a href=""><i class="bi bi-facebook"></i></a>
@@ -623,71 +576,6 @@
       </div>
     </section><!-- End Team Section -->
 
-    <!-- ======= Clients Section ======= -->
-    <section id="clients" class="section-bg">
-
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-header">
-          <h3>Our CLients</h3>
-          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque dere santome nida.</p>
-        </div>
-
-        <div class="row g-0 clients-wrap clearfix" data-aos="zoom-in" data-aos-delay="100">
-
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="client-logo">
-              <img src="assets/img/clients/client-1.png" class="img-fluid" alt="">
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="client-logo">
-              <img src="assets/img/clients/client-2.png" class="img-fluid" alt="">
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="client-logo">
-              <img src="assets/img/clients/client-3.png" class="img-fluid" alt="">
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="client-logo">
-              <img src="assets/img/clients/client-4.png" class="img-fluid" alt="">
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="client-logo">
-              <img src="assets/img/clients/client-5.png" class="img-fluid" alt="">
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="client-logo">
-              <img src="assets/img/clients/client-6.png" class="img-fluid" alt="">
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="client-logo">
-              <img src="assets/img/clients/client-7.png" class="img-fluid" alt="">
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="client-logo">
-              <img src="assets/img/clients/client-8.png" class="img-fluid" alt="">
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section><!-- End Clients Section -->
 
     <!-- ======= Contact Section ======= -->
     <section id="contact">
@@ -701,7 +589,7 @@
 
           <div class="col-lg-6">
             <div class="map mb-4 mb-lg-0">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0; width: 100%; height: 340px;" allowfullscreen></iframe>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2024084.8191648992!2d110.48296353300462!3d-7.758966549776384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7897c242c647f7%3A0x873369a8f6e0b739!2sAgen%20Tiket%20Rahayu!5e0!3m2!1sid!2sid!4v1702302490889!5m2!1sid!2sid" frameborder="0" style="border:0; width: 100%; height: 340px;" allowfullscreen></iframe>
             </div>
           </div>
 
@@ -709,15 +597,15 @@
             <div class="row">
               <div class="col-md-5 info">
                 <i class="bi bi-geo-alt"></i>
-                <p>A108 Adam Street, NY 535022</p>
+                <p>Jl. Simpang Tiga Nomor 12, Selorejo, Kec. Selorejo, Kabupaten Blitar, Jawa Timur 66192</p>
               </div>
               <div class="col-md-4 info">
                 <i class="bi bi-envelope"></i>
-                <p>info@example.com</p>
+                <p>rahayuticcket@gmail.com</p>
               </div>
               <div class="col-md-3 info">
                 <i class="bi bi-phone"></i>
-                <p>+1 5589 55488 55</p>
+                <p>+62 8509 3237 4932</p>
               </div>
             </div>
 
@@ -761,16 +649,16 @@
         <div class="row">
 
           <div class="col-lg-4 col-md-6 footer-info">
-            <h3>NewBiz</h3>
-            <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus. Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat mauris nunc congue.</p>
+            <h3>Agen Tiket Rahayu</h3>
+            <p>Kami adalah agen perjalanan yang berdedikasi untuk memberikan pengalaman liburan terbaik, dengan tim profesional yang siap membantu mewujudkan impian perjalanan Anda.</p>
           </div>
 
           <div class="col-lg-2 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
               <li><a href="#">Home</a></li>
-              <li><a href="#">About us</a></li>
-              <li><a href="#">Services</a></li>
+              <li><a href="#about">About us</a></li>
+              <li><a href="#services">Services</a></li>
               <li><a href="#">Terms of service</a></li>
               <li><a href="#">Privacy policy</a></li>
             </ul>
@@ -779,18 +667,18 @@
           <div class="col-lg-3 col-md-6 footer-contact">
             <h4>Contact Us</h4>
             <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
-              United States <br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
+              Jl. Simpang Tiga Nomor 12 <br>
+              Selorejo, Kec. Selorejo<br>
+              Kabupaten Blitar, Jawa Timur 66192 <br>
+              <strong>Phone:</strong> +62 8509 3237 4932<br>
+              <strong>Email:</strong> rahayuticcket@gmail.com<br>
             </p>
 
             <div class="social-links">
               <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
               <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
               <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-              <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="instagram"><i class="bi bi-youtube"></i></a>
               <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
             </div>
 
@@ -798,7 +686,7 @@
 
           <div class="col-lg-3 col-md-6 footer-newsletter">
             <h4>Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna veniam enim veniam illum dolore legam minim quorum culpa amet magna export quem marada parida nodela caramase seza.</p>
+            <p>Subscribe untuk mendapatkan informasi diskon dan rekomendasi perjalanan.</p>
             <form action="" method="post">
               <input type="email" name="email"><input type="submit" value="Subscribe">
             </form>
@@ -810,7 +698,7 @@
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong>NewBiz</strong>. All Rights Reserved
+        &copy; Copyright <strong>KyzutoWorks</strong>. All Rights Reserved
       </div>
       <div class="credits">
         <!--
@@ -819,7 +707,7 @@
         Licensing information: https://bootstrapmade.com/license/
         Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=NewBiz
       -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        Designed by <a href="#">Kelompok 2 APS & RPL</a>
       </div>
     </div>
   </footer><!-- End Footer -->
