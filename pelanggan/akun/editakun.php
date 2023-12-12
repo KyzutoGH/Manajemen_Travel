@@ -59,7 +59,7 @@
                                 <div class="form-group">
                                     <div class="col-sm-offset-2 col-sm-10">
                                         <button type="submit" class="btn btn-success">Simpan</button>
-                                        <a href="../index.php?submenu=<?php echo $subzero ?>" class="btn btn-primary">Batal</a>
+                                        <a href="index.php?submenu=Akun" class="btn btn-primary">Batal</a>
                                     </div>
                                 </div>
                             </form>

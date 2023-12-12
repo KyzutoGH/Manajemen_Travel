@@ -3,9 +3,7 @@
         <h1>Tambah Mode</h1>
         <ol class="breadcrumb">
             <li><a href="../index.php"><i class="fa fa-dashboard"></i> Beranda</a></li>
-            <li class="active">Tambah <?php if ($subzero == "Armada") {
-                                            echo 'Armada';
-                                        } ?></li>
+            <li class="active">Halaman Pemesanan</li>
         </ol>
     </section>
     <section class="content">

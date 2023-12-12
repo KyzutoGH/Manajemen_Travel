@@ -50,9 +50,10 @@
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto " href="#transport">transport</a></li>
+          <li><a class="nav-link scrollto " href="#transport">Transport</a></li>
           <li><a class="nav-link scrollto" href="#team">Team</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li><a class="nav-link scrollto" href="pelanggan/login.php">Login</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -537,7 +538,7 @@
 
           <div class="col-lg-4 col-md-6" data-aos="zoom-out" data-aos-delay="200">
             <div class="member">
-              <img src="assets/img/team-2.jpg" class="img-fluid" alt="">
+              <img src="dist/img/akbarpropil.jpg" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>Aditya Akbar Rizky Karindra</h4>

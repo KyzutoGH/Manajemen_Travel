@@ -13,7 +13,7 @@
 
             <!-- Transaksi Menu -->
             <li class="<?= ($submenu == "Transaksi" || $submenu == "Akun" || $submenu == "Tiket") ? "active" : "" ?>">
-                <a href="<?= isset($subzero) && ($subzero == "Transaksi") ? '..' : '.' ?>/index.php?submenu=Transaksi">
+                <a href="<?= isset($subzero) && ($subzero == "Transaksi") ? '..' : '.' ?>/index.php?submenu=Transaksi&IDPelanggan=<?php echo $_SESSION['idpelanggan'];?>">
                     <i class="fa fa-money text-green"></i><span>Transaksi</span>
                 </a>
             </li>

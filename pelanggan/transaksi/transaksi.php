@@ -25,6 +25,7 @@
                             <tbody>
                                 <?php
                                 $no = 1;
+                                $idpel = $_SESSION['idpelanggan'];
                                 $data = mysqli_query($koneksi, "SELECT j.IDJadwal,
                                     t.IDTransaksi,
                                     a.NamaArmada,
@@ -32,6 +33,7 @@
                                     j.Tujuan,
                                     t.BuktiTransaksi,
                                     j.TanggalBerangkat,
+                                    p.IDPelanggan,
                                     t.IDTransaksi AS 'ID Transaksi',
                                     p.NamaPelanggan AS 'Nama Pelanggan',
                                     CONCAT(SUBSTRING(a.NamaArmada, 1, 3), SUBSTRING(j.Asal, 1, 3), SUBSTRING(j.Tujuan, 1, 3)) AS 'Perjalanan',
@@ -50,6 +52,8 @@
                                     armada a ON j.IDArmada = a.IDArmada
                                 LEFT JOIN
                                     detailtransaksi tp ON t.IDTransaksi = tp.IDTransaksi
+                                WHERE 
+                                    p.IDPelanggan='$idpel'
                                 GROUP BY 
                                     t.IDTransaksi, p.NamaPelanggan, j.Diskon, t.StatusTransaksi
                                 ");
@@ -66,7 +70,7 @@
                                                 1 => "JANUARI", 2 => "FEBRUARI", 3 => "MARET", 4 => "APRIL", 5 => "MEI", 6 => "JUNI",
                                                 7 => "JULI", 8 => "AGUSTUS", 9 => "SEPTEMBER", 10 => "OKTOBER", 11 => "NOVEMBER", 12 => "DESEMBER"
                                             );
-                                            
+
                                             $tanggalFormatted = date('d', $timestamp) . ' ' . $bulan[date('n', $timestamp)] . ' ' . date('Y', $timestamp);
                                             echo $tanggalFormatted;
                                             ?>
@@ -93,7 +97,7 @@
                                                     </button>
                                                 <?php
                                                 } elseif ($d['Status'] == 'Dibayar') { ?>
-                                                    <a href="index.php?submenu=Tiket&IDTransaksi=<?php echo $d['IDTransaksi'];?>" class="btn btn-success"style="margin-left: 10px;" title="Lihat Tiket">
+                                                    <a href="index.php?submenu=Tiket&IDTransaksi=<?php echo $d['IDTransaksi']; ?>" class="btn btn-success" style="margin-left: 10px;" title="Lihat Tiket">
                                                         <span class="fa fa-ticket"></span>
                                                     </a>
                                                 <?php
