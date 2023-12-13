@@ -3,7 +3,7 @@
     include '../../bagian/koneksi.php';    
     
     $idpelanggan = $_POST['idpelanggan'];
-    $password = $_POST['password'];
+    $password = md5($_POST['password']);
     $namapelanggan = $_POST['namapelanggan'];
     $nomorhp = $_POST['nomorhp'];
     $nomoridentitas = $_POST['nomoridentitas'];

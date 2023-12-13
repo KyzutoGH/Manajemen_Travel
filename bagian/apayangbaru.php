@@ -20,8 +20,13 @@
                                 <li>Detail Akun Lengkap</li>
                                 <li>Manajemen Penumpang</li>
                                 <li>Perbaikan Bug Pada Transaksi Pelanggan</li>
+                                <li>Perbaikan Bug Pada Jadwal yang Menampilkan Jadwal Hari Sebelumnya*</li>
+                                <li>Perbaikan Bug Pada Halaman Depan*</li>
+                                <li>Penambahan Keamanan pada Password*</li>
+                                <li>Perbaikan Bug Pada Edit Akun</li>
                                 <li>Aplikasi Ini Belum Ramah Untuk Mobile</li>
                             </ul>
+                                <p style="color: red; font-weight: bold;">*Update kecil, diluar patch besar</p>
                             <li>
                                 <h3>Fitur Yang Akan Datang, Versi Capybara</h3>
                             </li>

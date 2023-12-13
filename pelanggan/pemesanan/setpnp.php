@@ -35,7 +35,7 @@
                     <div class="col-sm-9" style="width: 930px">
                         <?php
                         include("../bagian/koneksi.php");
-                        $idplg = $_GET['IDPelanggan'];
+                        $idplg = $_SESSION['idpelanggan'];
                         $sqlPelanggan = mysqli_query($koneksi, "SELECT IDPelanggan, NamaPelanggan FROM Pelanggan WHERE IDPelanggan=$idplg");
                         if ($x = mysqli_fetch_assoc($sqlPelanggan)) {
                         ?>

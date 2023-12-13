@@ -1,9 +1,9 @@
 <header class="main-header">
-	<a href="#" class="logo" style="background-color: #A5D7E8 ;">
+	<a href="#" class="logo" style="background-color: magenta;">
 		<span class="logo-lg"><img src="../dist/img/logovertikal.png" style="width: 73%;"></span>
 		<span class="logo-mini"><img src="../dist/img/favikon.png" style="width: 32px; height: 32px;"></span>
 	</a>
-	<nav class="navbar navbar-static-top" style="background-color: #576CBC;">
+	<nav class="navbar navbar-static-top" style="background-color: cadetblue;">
 		<a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
 			<span class="sr-only">Toggle navigation</span>
 			<span class="icon-bar"></span>
