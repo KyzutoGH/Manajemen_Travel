@@ -43,14 +43,14 @@
       <div>
         <!-- Uncomment below if you prefer to use an text logo -->
         <!-- <h1><a href="index.html">NewBiz</a></h1> -->
-        <a href="index.html"><img src="assets/img/ogol(1).png"></a>
+        <a href="index.php"><img src="assets/img/ogol(1).png"></a>
       </div>
 
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto " href="#transport">Transport</a></li>
+          <li><a class="nav-link scrollto " href="#portfolio">Transport</a></li>
           <li><a class="nav-link scrollto" href="#team">Team</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
           <li><a class="nav-link scrollto" href="pelanggan/login.php">Login</a></li>
@@ -444,55 +444,11 @@
 
                 <div class="swiper-slide">
                   <div class="testimonial-item">
-                    <img src="assets/img/testimonial-1.jpg" class="testimonial-img" alt="">
-                    <h3>Saul Goodman</h3>
-                    <h4>Ceo &amp; Founder</h4>
+                    <img src="dist/img/e17747c78dd89a1d9522c5da154128b2.png" class="testimonial-img" alt="">
+                    <h3>Coming Soon</h3>
+                    <h4>Nanti &amp; Saja</h4>
                     <p>
-                      Saya sangat terkesan dengan pelayanan yang diberikan oleh agen travel ini. Mereka benar-benar membuat liburan saya tak terlupakan. Semua terorganisir dengan baik, mulai dari akomodasi hingga kegiatan. Terima kasih, agen travel terbaik!
-                    </p>
-                  </div>
-                </div><!-- End testimonial item -->
-
-                <div class="swiper-slide">
-                  <div class="testimonial-item">
-                    <img src="assets/img/testimonial-2.jpg" class="testimonial-img" alt="">
-                    <h3>Sara Wilsson</h3>
-                    <h4>Designer</h4>
-                    <p>
-                      Agen travel ini sungguh luar biasa! Pekerjaan tim profesionalnya terlihat dari cara mereka menanggapi pertanyaan saya dengan cepat dan memberikan solusi terbaik. Saya sangat merekomendasikan kepada siapa saja yang mencari layanan perjalanan berkualitas.
-                    </p>
-                  </div>
-                </div><!-- End testimonial item -->
-
-                <div class="swiper-slide">
-                  <div class="testimonial-item">
-                    <img src="assets/img/testimonial-3.jpg" class="testimonial-img" alt="">
-                    <h3>Jena Karlis</h3>
-                    <h4>Store Owner</h4>
-                    <p>
-                      Saya ingin berterima kasih atas perjalanan yang dikelola dengan begitu baik. Semua jadwal dan kebutuhan kami dipenuhi tanpa kendala. Agen travel ini memberikan layanan yang luar biasa dan memberikan nilai lebih untuk setiap momen perjalanan.
-                    </p>
-                  </div>
-                </div><!-- End testimonial item -->
-
-                <div class="swiper-slide">
-                  <div class="testimonial-item">
-                    <img src="assets/img/testimonial-4.jpg" class="testimonial-img" alt="">
-                    <h3>Matt Brandon</h3>
-                    <h4>Freelancer</h4>
-                    <p>
-                      Perjalanan bersama agen ini memberikan lebih dari yang saya harapkan. Fotografer mereka tidak hanya ahli dalam mengabadikan momen-momen indah, tetapi juga mampu menangkap esensi dan kegembiraan kami. Saya sangat puas dengan hasilnya!
-                    </p>
-                  </div>
-                </div><!-- End testimonial item -->
-
-                <div class="swiper-slide">
-                  <div class="testimonial-item">
-                    <img src="assets/img/testimonial-5.jpg" class="testimonial-img" alt="">
-                    <h3>John Larson</h3>
-                    <h4>Entrepreneur</h4>
-                    <p>
-                      Setelah mencoba beberapa agen travel, saya akhirnya menemukan yang terbaik! Pelayanan yang ramah, jadwal yang terencana dengan baik, dan rekomendasi destinasi yang tepat membuat setiap perjalanan bersama mereka selalu istimewa. Tak sabar untuk merencanakan petualangan berikutnya!
+                      Fitur ini akan hadir di versi berikutnya!
                     </p>
                   </div>
                 </div><!-- End testimonial item -->

@@ -82,28 +82,17 @@
                                         <td>
                                             <?php
                                             $harga = $d['Harga'];
-                                            $diskon = $d['Diskon'];
                                             $jumlahPenumpang = $d['Jumlah Penumpang']; // Ganti dengan kode yang mengambil jumlah penumpang
-
-                                            // Menghitung harga setelah diskon
-                                            $hargaSetelahDiskon = $harga - ($harga * ($diskon / 100));
 
                                             if ($jumlahPenumpang == 0) {
                                                 // Menghitung total harga berdasarkan jumlah penumpang
-                                                $totalHarga = $hargaSetelahDiskon * 1;
+                                                $totalHarga = $harga * 1;
                                             } elseif ($jumlahPenumpang != 0) {
-                                                $totalHarga = $hargaSetelahDiskon * $jumlahPenumpang;
+                                                $totalHarga = $harga * $jumlahPenumpang;
                                             }
-
-                                            if ($diskon == 0) {
                                                 // Menampilkan total harga dengan format rupiah
                                                 echo 'Rp ' . number_format($totalHarga, 0, ',', '.');
-                                            } elseif ($diskon != 0) {
-                                                // Menampilkan harga asli yang dicoret
-                                                echo '<del>Rp ' . number_format($harga * $jumlahPenumpang, 0, ',', '.') . '</del>';
-                                                // Menampilkan total harga dengan format rupiah
-                                                echo '<br>Rp ' . number_format($totalHarga, 0, ',', '.');
-                                            }
+                                            
                                             ?>
                                         </td>
                                         <td>

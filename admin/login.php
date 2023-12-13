@@ -7,7 +7,7 @@ include '../bagian/kepala.php';
 <div class="login-box">
   <div class="login-logo">
     <img src="../dist/img/travel.png" style="width: 150px;"><br>
-    <a href="index.php"><b>Administrasi</b> Travel</a>
+    <a href="../index.php"><b>Administrasi</b> Travel</a>
   </div>
   <div class="login-box-body">
     <form action="proseslogin.php" method="post" onsubmit="return cekLogin(this)">

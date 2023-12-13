@@ -63,7 +63,7 @@
                                             <td><?php echo $passengerRow['NamaPenumpang']; ?></td>
                                             <td><?php echo $row['Kelas']; ?></td>
                                             <td><?php
-                                                $tanggalBerangkat = $row['Tanggal Transaksi'];
+                                                $tanggalBerangkat = $row['TanggalBerangkat'];
                                                 $timestamp = strtotime($tanggalBerangkat);
 
                                                 $bulan = array(
