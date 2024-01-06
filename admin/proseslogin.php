@@ -3,11 +3,11 @@
 session_start();
  
 // menghubungkan php dengan koneksi database
-include 'koneksi.php';
+include '../bagian/koneksi.php';
  
 // menangkap data yang dikirim dari form login
 $user = $_POST['user'];
-$pass = $_POST['pass'];
+$pass = md5($_POST['pass']);
  
  
 // menyeleksi data user dengan username dan password yang sesuai
@@ -23,9 +23,9 @@ if($cek > 0){
     // buat session login dan username
     $_SESSION['user'] = $user;
     $_SESSION['status'] = "login";
-    $akses = "Admin";
+    $_SESSION['role'] = "admin";
     // alihkan ke halaman dashboard admin
-    header("location:../TravelGatel/admin/index.php");
+    header("location:../admin/index.php?submenu=Armada");
 }else{
   echo "ERROR 2";
 }
