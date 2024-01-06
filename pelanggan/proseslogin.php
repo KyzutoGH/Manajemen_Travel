@@ -8,7 +8,6 @@ include '../bagian/koneksi.php';
 // menangkap data yang dikirim dari form login
 $user = $_POST['user'];
 $pass = md5($_POST['pass']);
-echo $pass;?> <br><?php
  
  
 // menyeleksi data user dengan username dan password yang sesuai
