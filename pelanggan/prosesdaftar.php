@@ -1,12 +1,16 @@
 <?php
 include '../bagian/koneksi.php';
-  $aidi = uniqid();
-  $user = trim($_POST['user']);
-  $pass  = trim($_POST['pass']);
-  $nama  = trim($_POST['nama']);
-  $hp  = trim($_POST['hp']);
-  $nik  = trim($_POST['nik']);
+$aidi = trim($_POST['idpelanggan']);
+$idpnp = uniqid();
+$user = trim($_POST['user']);
+$pass  = trim($_POST['pass']);
+$nama  = trim($_POST['nama']);
+$hp  = trim($_POST['hp']);
+$nik  = trim($_POST['nik']);
 
-  mysqli_query($koneksi, "insert into pelanggan values('$aidi','$user','$pass','$nama','$hp','$nik')"); 
-  header("location:login.php");
-?>
+mysqli_query($koneksi, "insert into pelanggan values('$aidi','$user','$pass','$nama','$hp','$nik')");
+// Gunakan prepared statements dan tentukan kolom yang sesuai
+$queryPenumpang = "INSERT INTO penumpang (idpenumpang, idpelanggan, namapenumpang, nomoridentitas) VALUES ('$idpnp', '$aidi', '$nama', '$nik')";
+mysqli_query($koneksi, $queryPenumpang);
+
+header("location:login.php");
