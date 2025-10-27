@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['simpan'])) {
     $namaFileBaru = $randomNumber . '.' . $fileType;
 
     // tentukan lokasi file akan dipindahkan
-    $dirUpload = $_SERVER['DOCUMENT_ROOT'] . "TravelKaleng/dist/img/trxs/";
+    $dirUpload = $_SERVER['DOCUMENT_ROOT'] . "/TravelKaleng/dist/img/trxs/";
 
     // ID Transaksi
     $idtransaksi = $_POST['IDTransaksi'];
