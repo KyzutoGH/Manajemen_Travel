@@ -1,13 +1,13 @@
 <?php
 include '../bagian/koneksi.php';
-$judul_browser = "Aplikasi Travel Gatel - Administrator";
+$judul_browser = "Travel Agent Apps - Alpha";
 include '../bagian/kepala.php';
 ?>
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <img src="../dist/img/logo.png" style="width: 150px;"><br>
-    <a href="index.php"><b>Agen</b> Travel Rahayu</a>
+    <img src="../dist/img/travel.png" style="width: 150px;"><br>
+    <a href="../index.php"><b>Administrasi</b> Travel</a>
   </div>
   <div class="login-box-body">
     <form action="proseslogin.php" method="post" onsubmit="return cekLogin(this)">
@@ -21,7 +21,6 @@ include '../bagian/kepala.php';
       </div><br>
       <div class="row">
         <div class="col-xs-12">
-          <a href="register.php" class="btn btn-success">Daftar Member Baru</a>
           <button type="submit" class="btn btn-primary btn-flat pull-right" name="masuk">Masuk</button>
         </div>
       </div>
@@ -44,4 +43,4 @@ include '../bagian/kepala.php';
   }
 </script>
 
-<? include '../bagian/kaki.php';?>
+<?php include '../bagian/kaki.php';?>
