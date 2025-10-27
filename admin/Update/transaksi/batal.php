@@ -1,31 +1,40 @@
 <?php
 include '../../../bagian/koneksi.php';
 
-$id = $_GET['idtrx'];
-$status = $_GET['status'];
+$id = $_GET['idtrx'] ?? null;
+$status = $_GET['status'] ?? null;
 
-// Retrieve the old image filename
+if (!$id) {
+    die("ID transaksi tidak ditemukan.");
+}
+
+// Ambil nama file bukti transaksi
 $query = mysqli_query($koneksi, "SELECT BuktiTransaksi FROM transaksi WHERE IDTransaksi='$id'");
 $row = mysqli_fetch_assoc($query);
 $oldImage = $row['BuktiTransaksi'] ?? null;
 
-// If there is an old image, delete it
+// Jika ada bukti lama dan file-nya benar-benar ada, hapus
 if ($oldImage) {
-    $dirUpload = $_SERVER['DOCUMENT_ROOT'] . "/TravelKaleng/dist/img/trxs/"; // Update this path
-    unlink($dirUpload . $oldImage);
+    $dirUpload = $_SERVER['DOCUMENT_ROOT'] . "/TravelKaleng/dist/img/trxs/";
+    $filePath = $dirUpload . $oldImage;
+    if (file_exists($filePath)) {
+        unlink($filePath);
+    }
 }
 
-// Perform the update query
-mysqli_query($koneksi, "UPDATE transaksi SET BuktiTransaksi=' ', StatusTransaksi='Belum Kirim Bukti' WHERE IDTransaksi='$id'");
+// Update status transaksi jadi Dibatalkan dan kosongkan bukti
+$update = mysqli_query($koneksi, "
+    UPDATE transaksi 
+    SET BuktiTransaksi = '', 
+        StatusTransaksi = 'Dibatalkan' 
+    WHERE IDTransaksi = '$id'
+");
 
-// Validate the update operation
-if (mysqli_affected_rows($koneksi) > 0) {
-    // If at least one row is affected, redirect to the specified page
-    header("location: ../../index.php?submenu=Transaksi");
-    exit(); // Ensure that the script exits after setting the header
+// Validasi hasil update
+if ($update && mysqli_affected_rows($koneksi) > 0) {
+    header("Location: ../../index.php?submenu=Transaksi");
+    exit();
 } else {
-    // If no rows were affected, handle the case accordingly
-    echo "Update failed. No rows were affected.";
-    // You may also choose to redirect with an error parameter, or display an error message on the current page
+    echo "Gagal membatalkan transaksi (mungkin ID salah atau data tidak berubah).";
 }
 ?>
