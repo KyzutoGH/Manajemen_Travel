@@ -50,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $idPelanggan = isset($_POST["idpelanggan"]) ? $_POST["idpelanggan"] : null; // Ensure it's set
 
     // Insert data into the Transaksi table
-    $sqlInsertTransaksi = "INSERT INTO Transaksi (IDTransaksi, IDPelanggan, IDJadwal, TanggalTransaksi, TotalHarga, StatusTransaksi) VALUES ('$idtrax','$idPelanggan', '$idjadwal', NOW(), '$totalHargabayar', 'Belum Dibayar')";
+    $sqlInsertTransaksi = "INSERT INTO Transaksi (IDTransaksi, IDPelanggan, IDJadwal, TanggalTransaksi, TotalHarga, StatusTransaksi, BuktiTransaksi) VALUES ('$idtrax','$idPelanggan', '$idjadwal', NOW(), '$totalHargabayar', 'Belum Dibayar', '')";
 
     if ($koneksi && mysqli_query($koneksi, $sqlInsertTransaksi)) {
         $idTransaksi = mysqli_insert_id($koneksi); // Get the last inserted ID
