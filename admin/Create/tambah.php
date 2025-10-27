@@ -1,5 +1,5 @@
 <?php
-$judul_browser = "Administrator - Aplikasi Travel Gatel";
+$judul_browser = "Travel Agent Apps - Alpha";
 include '../../bagian/koneksi.php';
 $menu = "Perjalanan";
 $submenu = "Armada";
@@ -14,6 +14,7 @@ session_start();
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title><?php echo $judul_browser; ?></title>
+    <link href="../../dist/img/favikon.png" rel="icon">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <link rel="stylesheet" href="../../dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../dist/css/AdminLTE.min.css">
@@ -84,8 +85,8 @@ session_start();
                         <ol class="breadcrumb">
                             <li><a href="../index.php"><i class="fa fa-dashboard"></i> Beranda</a></li>
                             <li class="active">Tambah <?php if ($subzero == "Armada") {
-                                echo 'Armada';
-                            }?></li>
+                                                            echo 'Armada';
+                                                        } ?></li>
                         </ol>
                     </section>
                     <section class="content">
@@ -99,51 +100,45 @@ session_start();
                                 include 'pelanggan/insert.php';
                             } elseif ($subzero == "Penumpang") {
                                 include 'penumpang/insert.php';
+                            } elseif ($subzero == "TransaksiPelanggan") {
+                                include 'transaksipelanggan/insert.php';
                             } elseif ($subzero == "Transaksi") {
                                 include 'transaksi/insert.php';
                             } elseif ($subzero == "Bayar") {
                                 include 'transaksi/bayar.php';
-                            }?>
+                            } ?>
                         </div>
                     </section>
                 </div>
-                <footer class="main-footer">
-                    <div class="pull-right hidden-xs">
-                        <b>Version</b> 1.0.0
-                    </div>
-                    <strong>Copyright &copy; 2018 <a href="#">IksanJR</a>.</strong>
-                </footer>
-            </div>
-
-
-        <?php
+            <?php
+            include '../../bagian/copyright.php';
         }
     } else {
-        ?>
-        <div class="row">
-            <div class="col-md-offset-4 col-md-4">
-                <div class="panel panel-warning">
-                    <div class="panel-heading">
-                        Informasi
-                    </div>
-                    <div class="panel-body">
-                        <p>Maaf, Anda tidak berhak mengakses halaman ini secara langsung. Silahkan login terlebih dahulu.</p>
-                        <a class="btn btn-warning pull-right" role="button" href="../login.php">Login</a>
+            ?>
+            <div class="row">
+                <div class="col-md-offset-4 col-md-4">
+                    <div class="panel panel-warning">
+                        <div class="panel-heading">
+                            Informasi
+                        </div>
+                        <div class="panel-body">
+                            <p>Maaf, Anda tidak berhak mengakses halaman ini secara langsung. Silahkan login terlebih dahulu.</p>
+                            <a class="btn btn-warning pull-right" role="button" href="../login.php">Login</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    <?php
+        <?php
     }
-    ?>
+        ?>
 
-    <script src="../../dist/js/jquery.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <script src="../../dist/js/sweetalert2.min.js"></script>
-    <script src="../../dist/js/jquery.slimscroll.min.js"></script>
-    <script src="../../dist/js/fastclick.js"></script>
-    <script src="../../dist/js/adminlte.min.js"></script>
-    <script src="../../dist/js/demo.js"></script>
+        <script src="../../dist/js/jquery.min.js"></script>
+        <script src="../../dist/js/bootstrap.min.js"></script>
+        <script src="../../dist/js/sweetalert2.min.js"></script>
+        <script src="../../dist/js/jquery.slimscroll.min.js"></script>
+        <script src="../../dist/js/fastclick.js"></script>
+        <script src="../../dist/js/adminlte.min.js"></script>
+        <script src="../../dist/js/demo.js"></script>
 </body>
 
 </html>

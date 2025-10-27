@@ -11,7 +11,7 @@
             <div class="col-xs-12">
                 <div class="box">
                     <div class="box-header">
-                        <a href="Create/tambah.php?subzero=<?php echo $submenu; ?>" class="btn btn-primary" role="button"><b>+</b> Tambah Penumpang</a>
+                        <!-- <a href="Create/tambah.php?subzero=<?php echo $submenu; ?>" class="btn btn-primary" role="button"><b>+</b> Tambah Penumpang</a> -->
                     </div>
                     <div class="box-body">
                         <table id="example2" class="table table-bordered table-hover">
@@ -19,7 +19,6 @@
                                 <tr>
                                     <th>No</th>
                                     <th>Nama Pelanggan</th>
-                                    <th>NomorHP</th>
                                     <th>Nama Penumpang</th>
                                     <th>Nomor Identitas</th>
                                     <th>Aksi</th>
@@ -52,7 +51,6 @@
                                             }
                                             ?>
                                         </td>
-                                        <td><?php echo $d['NomorHP']; ?></td>
                                         <td><?php echo $d['NamaPenumpang']; ?></td>
                                         <td><?php echo $d['NomorIdentitas']; ?></td>
                                         <td>

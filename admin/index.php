@@ -1,5 +1,5 @@
 <?php
-$judul_browser = "Administrator - Aplikasi Travel Gatel";
+$judul_browser = "Travel Agent Apps - Badger";
 include '../bagian/koneksi.php';
 $menu = isset($_GET['menu']) ? $_GET['menu'] : '';
 $submenu = isset($_GET['submenu']) ? $_GET['submenu'] : '';
@@ -35,8 +35,10 @@ include '../bagian/saitel.php';
 				include 'Read/laporan.php';
 			} elseif ($submenu == "Detail") {
 				include 'Read/detail.php';
+			} elseif ($submenu == "New") {
+				include '../bagian/apayangbaru.php';
 			} else {
-				include 'TheHandler/tabel404.php';
+				include '../TheHandler/tabel404.php';
 			}
 			include '../bagian/copyright.php';
 		}
