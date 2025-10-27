@@ -1,7 +1,7 @@
 <?php
 include '../bagian/koneksi.php';
 $aidi = trim($_POST['idpelanggan']);
-$idpnp = uniqid();
+$idpnp = rand(100000, 999999); // ID acak 6 digit (misal 345672)
 $user = trim($_POST['user']);
 $pass  = trim($_POST['pass']);
 $nama  = trim($_POST['nama']);
