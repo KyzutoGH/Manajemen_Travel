@@ -1,13 +1,13 @@
 <?php
 include '../bagian/koneksi.php';
-$judul_browser = "Aplikasi Travel Gatel - Pelanggan";
+$judul_browser = "Travel Agent Apps - Pelanggan";
 include '../bagian/kepala.php';
 ?>
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <img src="../dist/img/logo.png" style="width: 150px;"><br>
-    <a href="index.php"><b>Agen</b> Travel Rahayu</a>
+    <img src="../dist/img/travel.png" style="width: 150px;"><br>
+    <a href="../index.php"><b>Agen</b> Travel Rahayu</a>
   </div>
   <div class="login-box-body">
     <form action="proseslogin.php" method="post" onsubmit="return cekLogin(this)">
